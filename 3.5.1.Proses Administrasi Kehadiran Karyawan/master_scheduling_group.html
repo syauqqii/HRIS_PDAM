@@ -34,9 +34,9 @@
             <tbody>
               <tr>
                 <td>1</td>
-                <td>Natindo</td>
-                <td>Libur Hari Nasional Indonesia</td>
-                <td>Natindo</td>
+                <td>Regular</td>
+                <td>Hari Kerja Regular</td>
+                <td>WTP001</td>
                 <td class="text-center">
                   <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#formModal">Edit</button>
                   <button class="btn btn-sm btn-outline-secondary">Delete</button>
@@ -59,18 +59,24 @@
           <form>
             <div class="modal-body">
               <div class="row g-3">
+               
                 <div class="col-md-6">
-                  <label class="form-label">ID</label>
-                  <input type="number" class="form-control" name="id_job_title" required>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Organization Type</label>
+                  <label class="form-label">Name</label>
                   <input type="text" class="form-control" name="job_name" required>
                 </div>
                 <div class="col-md-6">
                   <label class="form-label">Description</label>
                   <input type="number" class="form-control" name="job_maximum_level">
                 </div>
+                <div class="col-md-6">
+                    <label class="form-label">Work Time Pattern</label>
+                    <select class="form-select" name="SPPD_Type">
+                      <option value="">-- Pilih --</option>
+                      <option value="WTP001">WTP001</option>
+                      <option value="WTP002">WTP002</option>
+                      <option value="WTP003">WTP003</option>
+                    </select>
+                  </div>
               </div>
             </div>
             <div class="modal-footer bg-white border-top">
