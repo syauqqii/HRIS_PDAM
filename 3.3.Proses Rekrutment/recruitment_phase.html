@@ -88,16 +88,34 @@
             <div class="modal-body">
               <div class="row g-3">
                 <div class="col-md-6">
-                  <label class="form-label">ID</label>
-                  <input type="number" class="form-control" name="id_job_title" required>
-                </div>
+                    <label class="form-label">Recruitment Request</label>
+                    <select class="form-select" name="SPPD_Type">
+                      <option value="">-- Pilih --</option>
+                      
+
+
+
+                      <option value="Satgas Akuntansi">Satgas Akuntansi</option>
+                      <option value="Operator Lapangan">Operator Lapangan</option>
+                      <option value="Magang IT">Magang IT</option>
+                      <option value="Satgas EPB">Satgas EPB</option>
+                    </select>
+                  </div>
                 <div class="col-md-6">
-                  <label class="form-label">Organization Type</label>
+                  <label class="form-label">Name</label>
                   <input type="text" class="form-control" name="job_name" required>
                 </div>
                 <div class="col-md-6">
                   <label class="form-label">Description</label>
                   <input type="number" class="form-control" name="job_maximum_level">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Start Date</label>
+                  <input type="date" class="form-control" name="job_name" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">End Date</label>
+                  <input type="date" class="form-control" name="job_name" required>
                 </div>
               </div>
             </div>
