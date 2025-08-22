@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Tax PTKP</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/style.css">
+</head>
+<body>
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                    <a href="../master_tax_setup.html" class="nav-link active" role="tab">Kembali</a>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Master Tax Setup ID: 1</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                            <button class="nav-link active" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-group" type="button" role="tab">Master Tax PTKP</button>
+                            <button class="nav-link" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-teex" type="button" role="tab">Master Tax Fare</button>
+                            <button class="nav-link" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-yyy" type="button" role="tab">Master Tax Setup Detail</button>
+                            <!-- yyy -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9">
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show active" id="answer-group" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Master Tax PTKP Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="master_tax_setup_id" class="form-label">Master Tax Setup ID</label>
+                                            <input type="number" class="form-control" name="master_tax_setup_id" value="1" readonly>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="TaxCategoryId" class="form-label">Tax Category</label>
+                                            <input type="text" class="form-control" name="TaxCategoryId" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="Amount" class="form-label">Amount</label>
+                                            <input type="number" step="0.01" class="form-control" name="Amount" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="Tax_TER" class="form-label">Tax TER</label>
+                                            <input type="text" class="form-control" name="Tax_TER" required>
+                                        </div>
+                                    </div>
+                                    </div>
+
+                                    <div class="text-end">
+                                    <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Master Tax PTKP Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Master Tax Setup ID</th>
+                                                    <th>Tax Category</th>
+                                                    <th>Amount</th>
+                                                    <th>Tax TER</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>PTKP K/0</td>
+                                                    <td>54000000</td>
+                                                    <td>Final</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show" id="answer-teex" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Master Tax Fare Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="master_tax_setup_id" class="form-label">Master Tax Setup ID</label>
+                                            <input type="number" class="form-control" name="master_tax_setup_id" value="1" readonly>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="minimum_scale_amount" class="form-label">Minimum Scale Amount</label>
+                                            <input type="number" step="0.01" class="form-control" name="minimum_scale_amount" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="max_scale_amount" class="form-label">Maximum Scale Amount</label>
+                                            <input type="number" step="0.01" class="form-control" name="max_scale_amount" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="percent" class="form-label">Percent</label>
+                                            <input type="number" step="0.01" class="form-control" name="percent" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="with_npwp" class="form-label">With NPWP</label>
+                                            <select class="form-select" name="with_npwp" required>
+                                                <option value="">-- Pilih Status --</option>
+                                                <option value="true">Yes</option>
+                                                <option value="false">No</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="tax_ter" class="form-label">Tax TER</label>
+                                            <input type="text" class="form-control" name="tax_ter" required>
+                                        </div>
+                                    </div>
+                                    </div>
+
+                                    <div class="text-end">
+                                    <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Master Tax Fare Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Master Tax Setup ID</th>
+                                                    <th>Minimum Scale Amount</th>
+                                                    <th>Maximum Scale Amount</th>
+                                                    <th>Percent</th>
+                                                    <th>With NPWP</th>
+                                                    <th>Tax TER</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>5000000</td>
+                                                    <td>10000000</td>
+                                                    <td>5</td>
+                                                    <td>Yes</td>
+                                                    <td>Final</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show" id="answer-yyy" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Master Tax Setup Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Master Tax Setup ID</label>
+                                            <input type="number" class="form-control" name="master_tax_setup_id" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Pay Code Allowance</label>
+                                            <input type="text" class="form-control" name="pay_code_allowance" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Pay Code Deduction</label>
+                                            <input type="text" class="form-control" name="pay_code_deduction" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Payroll Type ID</label>
+                                            <input type="text" class="form-control" name="payrolltypeid" required>
+                                        </div>
+                                    </div>
+                                    </div>
+
+                                    <div class="text-end">
+                                    <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Master Tax Setup Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Master Tax Setup ID</th>
+                                                    <th>Pay Code Allowance</th>
+                                                    <th>Pay Code Deduction</th>
+                                                    <th>Payroll Type ID</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>Allowance A</td>
+                                                    <td>Deduction X</td>
+                                                    <td>PT001</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
