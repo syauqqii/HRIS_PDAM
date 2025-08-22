@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +8,27 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../public/style.css">
 </head>
+
 <body>
     <div class="container-fluid mt-4">
         <div class="row">
             <!-- Sidebar -->
             <div class="col-md-3">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
-                    <a 
-                        href="./3.5.Proses%20Administrasi%20Kehadiran%20Karyawan/work_time_pattern.html" 
-                        class="nav-link active" 
-                        role="tab"
-                    >
+                    <a href="../work_time_pattern.html" class="nav-link active" role="tab">
                         Kembali
                     </a>
                 </div>
                 <br>
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="mb-0">Work Time Pattern : Natindo</h5>
+                        <h5 class="mb-0">Work Time Pattern : Pola kerja reguler</h5>
                     </div>
                     <div class="card-body">
                         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
-                            <button class="nav-link active" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-group" type="button" role="tab">Work Time Pattern Detail</button>
+                            <button class="nav-link active" id="answer-group-tab" data-bs-toggle="pill"
+                                data-bs-target="#answer-group" type="button" role="tab">Work Time Pattern
+                                Detail</button>
                         </div>
                     </div>
                 </div>
@@ -42,31 +42,33 @@
                     <div class="tab-pane fade show active" id="answer-group" role="tabpanel">
                         <div class="card">
                             <div class="card-header">
-                                <h5 class="mb-0">Work Time Pattern Detail Management</h5>
+                                <h5 class="mb-0">Work Time Pattern Detail</h5>
                             </div>
                             <div class="card-body">
                                 <form id="answerGroupForm">
                                     <div id="answerDetails">
-                                    <div class="row mb-3">
-                                        <div class="col-md-6">
-                                        <label for="job_activity" class="form-label">Setup Time</label>
-                                        <select class="form-select" name="job_activity" required>
-                                                <option value="">-- Pilih Setup Time --</option>
-                                                <option value="CEO">Direktur Utama (CEO)</option>
-                                                <option value="HRM">Kepala HRD</option>
-                                                <option value="OPR">Operator Produksi</option>
-                                            </select>
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <label for="job_activity" class="form-label">Setup Time</label>
+                                                <select class="form-select" name="job_activity" required>
+                                                    <option value="">-- Pilih Setup Time --</option>
+                                                    <option value="Regular office hours">Regular office hours</option>
+                                                    <option value="Shift-1">Shift-1</option>
+                                                    <option value="Shift-2">Shift-2</option>
+                                                    <option value="Shift-3">Shift-3</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label for="duration" class="form-label">Sequence</label>
+                                                <input type="number" class="form-control" id="duration" name="duration"
+                                                    placeholder="Input sequence" required>
+                                            </div>
                                         </div>
-                                    
-                                        <div class="col-md-6">
-                                        <label for="duration" class="form-label">Sequence</label>
-                                        <input type="text" class="form-control" id="duration" name="duration" placeholder="Input sequence" required>
-                                        </div>
-                                    </div>
                                     </div>
 
                                     <div class="text-end">
-                                    <button type="submit" class="btn btn-primary">Add Data</button>
+                                        <button type="submit" class="btn btn-primary">Add Data</button>
                                     </div>
                                 </form>
 
@@ -85,20 +87,52 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td><a href="./3.5.Proses%20Administrasi%20Kehadiran%20Karyawan/group/detail_public_holiday_date.html">1</a></td>
-                                                    <td>Graveyard Shift</td>
+                                                    <td>1</td>
+                                                    <td>Regular office hours</td>
                                                     <td>1</td>
                                                     <td>
-                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-dark btn-sm" data-bs-toggle="modal"
+                                                            data-bs-target="#formModal">View</button>
                                                         <button class="btn btn-sm btn-outline-secondary">Delete</button>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <td>Morning Shift</td>
+                                                    <td>Regular office hours</td>
                                                     <td>2</td>
                                                     <td>
-                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-dark btn-sm" data-bs-toggle="modal"
+                                                            data-bs-target="#formModal">View</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Regular office hours</td>
+                                                    <td>3</td>
+                                                    <td>
+                                                        <button class="btn btn-dark btn-sm" data-bs-toggle="modal"
+                                                            data-bs-target="#formModal">View</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Regular office hours</td>
+                                                    <td>4</td>
+                                                    <td>
+                                                        <button class="btn btn-dark btn-sm" data-bs-toggle="modal"
+                                                            data-bs-target="#formModal">View</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>Regular office hours</td>
+                                                    <td>5</td>
+                                                    <td>
+                                                        <button class="btn btn-dark btn-sm" data-bs-toggle="modal"
+                                                            data-bs-target="#formModal">View</button>
                                                         <button class="btn btn-sm btn-outline-secondary">Delete</button>
                                                     </td>
                                                 </tr>
@@ -111,10 +145,70 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="modal fade" id="formModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content border-0 shadow">
+                        <div class="modal-header bg-white border-bottom">
+                            <h5 class="modal-title">Add / Edit Data</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form>
+                            <div class="modal-body">
+                                <div class="row g-3">
+                                    <div class="col-md-12">
+                                        <label class="form-label">ID</label>
+                                        <input disabled type="number" class="form-control" name="id_job_title" required
+                                            value="1">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Start Hour</label>
+                                        <input disabled type="time" class="form-control" name="job_name" required value="09:00">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">End Hour</label>
+                                        <input disabled type="time" class="form-control" name="job_maximum_level" required
+                                            value="17:00">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Start Break</label>
+                                        <input disabled type="time" class="form-control" name="job_name" required value="12:00">
+                                    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    
+                                    <div class="col-md-6">
+                                        <label class="form-label">End Break</label>
+                                        <input disabled type="time" class="form-control" name="job_maximum_level" required
+                                            value="13:00">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">Name</label>
+                                        <input disabled type="text" class="form-control" name="id_job_title" required
+                                            value="Regular office hours">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">Note</label>
+                                        <input type="text" class="form-control" name="id_job_title" required
+                                            value="Regular office hours">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Over Day</label>
+                                            <select disabled class="form-select" name="SPPD_Type">
+                                                <option value="">-- Pilih --</option>
+                                                <option value="Yes">Yes</option>
+                                                <option value="No" selected>No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer bg-white border-top">
+                                    <button type="button" class="btn btn-outline-secondary"
+                                        data-bs-dismiss="modal">Cancel</button>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+
+                <script
+                    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>

@@ -106,18 +106,32 @@
           <form>
             <div class="modal-body">
               <div class="row g-3">
+              
                 <div class="col-md-6">
-                  <label class="form-label">ID</label>
-                  <input type="number" class="form-control" name="id_job_title" required>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Organization Type</label>
+                  <label class="form-label">Code</label>
                   <input type="text" class="form-control" name="job_name" required>
                 </div>
                 <div class="col-md-6">
-                  <label class="form-label">Description</label>
+                  <label class="form-label">Name</label>
                   <input type="number" class="form-control" name="job_maximum_level">
                 </div>
+                <div class="col-md-6">
+                    <label class="form-label">Presence Type</label>
+                    <select class="form-select" name="SPPD_Type">
+                      <option value="">-- Pilih --</option>
+                      <option value="absence">Absence</option>
+                      <option value="presence">Presence</option>
+                      <option value="off">Off</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Allow Permision Request</label>
+                    <select class="form-select" name="allow_permision_request">
+                      <option value="">-- Pilih --</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                  </div>
               </div>
             </div>
             <div class="modal-footer bg-white border-top">
