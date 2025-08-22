@@ -14,7 +14,7 @@
             <div class="col-md-3">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
                     <a 
-                        href="./3.2.Administrasi%20Organisasi/master_job.html" 
+                        href="../master_job.html" 
                         class="nav-link active" 
                         role="tab"
                     >
@@ -28,7 +28,8 @@
                     </div>
                     <div class="card-body">
                         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
-                            <button class="nav-link active" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-group" type="button" role="tab">Job Activity</button>
+                            <button class="nav-link active" id="skill-group-tab" data-bs-toggle="pill" data-bs-target="#skill-group" type="button" role="tab">Skill Unit Job</button>
+                            <button class="nav-link" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-group" type="button" role="tab">Job Activity</button>
                             <button class="nav-link" id="employee-response-tab" data-bs-toggle="pill" data-bs-target="#employee-response" type="button" role="tab">Job Education</button>
                         </div>
                     </div>
@@ -40,7 +41,74 @@
                 <div class="tab-content" id="v-pills-tabContent">
 
                     <!-- Answer Group Tab -->
-                    <div class="tab-pane fade show active" id="answer-group" role="tabpanel">
+                    <div class="tab-pane fade show active" id="skill-group" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Skill Unit Job Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="id" class="form-label">ID</label>
+                                            <input type="number" class="form-control" id="id" name="id" placeholder="Input ID" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="id_unit_skill" class="form-label">Unit Skill ID</label>
+                                            <input type="number" class="form-control" id="id_unit_skill" name="id_unit_skill" placeholder="Input Unit Skill ID" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="id_organization" class="form-label">Organization ID</label>
+                                            <input type="number" class="form-control" id="id_organization" name="id_organization" placeholder="Input Organization ID" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="id_job" class="form-label">Job ID</label>
+                                            <input type="number" class="form-control" id="id_job" name="id_job" placeholder="Input Job ID" required>
+                                        </div>
+                                    </div>
+                                    </div>
+
+                                    <div class="text-end">
+                                    <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Skill Unit Job Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Unit Skill ID</th>
+                                                    <th>Organization ID</th>
+                                                    <th>Job ID</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>10</td>
+                                                    <td>101</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show" id="answer-group" role="tabpanel">
                         <div class="card">
                             <div class="card-header">
                                 <h5 class="mb-0">Job Activity Management</h5>
