@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Master Rating CRUD</title>
+  <title>Master Template CRUD</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light text-dark">
 
   <div class="container py-5">
-    <h2 class="mb-4 text-center">Master Rating</h2>
+    <h2 class="mb-4 text-center">Master Template</h2>
 
     <!-- List Table -->
     <div class="card shadow-sm mb-4">
       <div class="card-header bg-white border-bottom">
         <div class="d-flex justify-content-between align-items-center">
-          <span class="fw-bold">Master Rating List</span>
+          <span class="fw-bold">Master Template List</span>
           <button class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#formModal">+ Add Data</button>
         </div>
       </div>
@@ -27,14 +27,20 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Description</th>
+                <th>Job Title ID</th>
+                <th>Rating Final ID</th>
+                <th>Master Rating ID</th>
                 <th class="text-center">Actions</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><a href="./group/rating_value.html">1</a></td>
-                <td>Excellent</td>
-                <td>Top rating for outstanding performance</td>
+                <td><a href="./group/master_template_detail.html">1</a></td>
+                <td>Template A</td>
+                <td>Performance Review Template</td>
+                <td>3</td>
+                <td>2</td>
+                <td>1</td>
                 <td class="text-center">
                   <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#formModal">Edit</button>
                   <button class="btn btn-sm btn-outline-secondary">Delete</button>
@@ -59,11 +65,23 @@
               <div class="row g-3">
                 <div class="col-md-6">
                   <label class="form-label">Name</label>
-                  <input type="text" class="form-control" name="name" placeholder="Enter rating name" required>
+                  <input type="text" class="form-control" name="name" required>
                 </div>
                 <div class="col-md-6">
                   <label class="form-label">Description</label>
-                  <input type="text" class="form-control" name="description" placeholder="Enter description">
+                  <input type="text" class="form-control" name="description">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Job Title ID</label>
+                  <input type="number" class="form-control" name="id_job_title" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Rating Final ID</label>
+                  <input type="number" class="form-control" name="id_rating_final" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Master Rating ID</label>
+                  <input type="number" class="form-control" name="id_master_rating" required>
                 </div>
               </div>
             </div>

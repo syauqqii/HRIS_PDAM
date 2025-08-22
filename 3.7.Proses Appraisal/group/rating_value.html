@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating Value</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/style.css">
+</head>
+<body>
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                    <a 
+                        href="../master_rating.html" 
+                        class="nav-link active" 
+                        role="tab"
+                    >
+                        Kembali
+                    </a>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Rating ID: 1</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                            <button class="nav-link active" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-group" type="button" role="tab">Rating Value</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9">
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show active" id="answer-group" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Rating Value Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="id_master_rating" class="form-label">Master Rating ID</label>
+                                            <input type="number" class="form-control" id="id_master_rating" name="id_master_rating" placeholder="Input Master Rating ID" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="value" class="form-label">Value</label>
+                                            <input type="number" class="form-control" id="value" name="value" placeholder="Input Value" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="description" class="form-label">Description</label>
+                                            <input type="text" class="form-control" id="description" name="description" placeholder="Input Description">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="level" class="form-label">Level</label>
+                                            <input type="number" class="form-control" id="level" name="level" placeholder="Input Level">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="from_value" class="form-label">From Value</label>
+                                            <input type="number" class="form-control" id="from_value" name="from_value" placeholder="Input From Value">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="to_value" class="form-label">To Value</label>
+                                            <input type="number" class="form-control" id="to_value" name="to_value" placeholder="Input To Value">
+                                        </div>
+                                    </div>
+                                    </div>
+
+                                    <div class="text-end">
+                                    <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Rating Value Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Master Rating ID</th>
+                                                    <th>Value</th>
+                                                    <th>Description</th>
+                                                    <th>Level</th>
+                                                    <th>From Value</th>
+                                                    <th>To Value</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>90</td>
+                                                    <td>Excellent performance</td>
+                                                    <td>5</td>
+                                                    <td>85</td>
+                                                    <td>100</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
