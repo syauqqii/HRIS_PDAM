@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Data</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/style.css">
+</head>
+<body>
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                    <a 
+                        href="../data_employee.html" 
+                        class="nav-link active" 
+                        role="tab"
+                    >
+                        Kembali
+                    </a>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">ID: 1</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                            <button class="nav-link active" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-group" type="button" role="tab">Personal Data</button>
+                            <button class="nav-link" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-asdf" type="button" role="tab">Contact Address</button>
+                            <button class="nav-link" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-jkl" type="button" role="tab">Personal Education</button>
+                            <button class="nav-link" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-iop" type="button" role="tab">Professional Experience</button>
+                            <button class="nav-link" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-qwer" type="button" role="tab">Personal Course</button>
+                            <button class="nav-link" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-mnb" type="button" role="tab">Personal Family Member</button>
+                            <button class="nav-link" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-ttt" type="button" role="tab">Person Medical Checkup</button>
+                            <button class="nav-link" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-zfds" type="button" role="tab">Person Identification</button>
+                            <button class="nav-link" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-yomah" type="button" role="tab">Person Bank</button>
+                            <button class="nav-link" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-ptkp" type="button" role="tab">Employee PTKP</button>
+                            <button class="nav-link" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-iiii" type="button" role="tab">Personal Skill</button>
+                            <button class="nav-link" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-jklop" type="button" role="tab">Assignment History</button>
+                             <button class="nav-link" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-dddd" type="button" role="tab">SK Detail</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9">
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show active" id="answer-group" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Personal Data Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <label for="nik" class="form-label">NIK</label>
+                                                <input type="text" class="form-control" name="nik" placeholder="Input NIK" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="first_name" class="form-label">First Name</label>
+                                                <input type="text" class="form-control" name="first_name" placeholder="Input First Name" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="middle_name" class="form-label">Middle Name</label>
+                                                <input type="text" class="form-control" name="middle_name" placeholder="Input Middle Name">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="last_name" class="form-label">Last Name</label>
+                                                <input type="text" class="form-control" name="last_name" placeholder="Input Last Name" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="birth_place" class="form-label">Birth Place</label>
+                                                <input type="text" class="form-control" name="birth_place" placeholder="Input Birth Place">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="birth_date" class="form-label">Birth Date</label>
+                                                <input type="date" class="form-control" name="birth_date" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="marital_status" class="form-label">Marital Status</label>
+                                                <select class="form-select" name="marital_status" required>
+                                                    <option value="">-- Pilih Marital Status --</option>
+                                                    <option value="single">Single</option>
+                                                    <option value="married">Married</option>
+                                                    <option value="widowed">Widowed</option>
+                                                    <option value="divorced">Divorced</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="religion" class="form-label">Religion</label>
+                                                <select class="form-select" name="religion" required>
+                                                    <option value="">-- Pilih Religion --</option>
+                                                    <option value="islam">Islam</option>
+                                                    <option value="kristen">Kristen</option>
+                                                    <option value="katolik">Katolik</option>
+                                                    <option value="budha">Budha</option>
+                                                    <option value="hindu">Hindu</option>
+                                                    <option value="konghucu">Konghucu</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="gender" class="form-label">Gender</label>
+                                                <select class="form-select" name="gender" required>
+                                                    <option value="">-- Pilih Gender --</option>
+                                                    <option value="male">Male</option>
+                                                    <option value="female">Female</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-end">
+                                        <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Personal Data Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>NIK</th>
+                                                    <th>First Name</th>
+                                                    <th>Middle Name</th>
+                                                    <th>Last Name</th>
+                                                    <th>Birth Place</th>
+                                                    <th>Birth Date</th>
+                                                    <th>Marital Status</th>
+                                                    <th>Religion</th>
+                                                    <th>Gender</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>1234567890</td>
+                                                    <td>Ahmad</td>
+                                                    <td>Fajar</td>
+                                                    <td>Setiawan</td>
+                                                    <td>Surabaya</td>
+                                                    <td>1990-05-20</td>
+                                                    <td>Single</td>
+                                                    <td>Islam</td>
+                                                    <td>Male</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>0987654321</td>
+                                                    <td>Siti</td>
+                                                    <td>Aulia</td>
+                                                    <td>Rahma</td>
+                                                    <td>Jakarta</td>
+                                                    <td>1985-08-15</td>
+                                                    <td>Married</td>
+                                                    <td>Kristen</td>
+                                                    <td>Female</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>1122334455</td>
+                                                    <td>Budi</td>
+                                                    <td>Santoso</td>
+                                                    <td>Wijaya</td>
+                                                    <td>Bandung</td>
+                                                    <td>1992-11-30</td>
+                                                    <td>Single</td>
+                                                    <td>Hindu</td>
+                                                    <td>Male</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>5566778899</td>
+                                                    <td>Rina</td>
+                                                    <td>Melati</td>
+                                                    <td>Putri</td>
+                                                    <td>Medan</td>
+                                                    <td>1995-03-10</td>
+                                                    <td>Divorced</td>
+                                                    <td>Budha</td>
+                                                    <td>Female</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>6677889900</td>
+                                                    <td>Agus</td>
+                                                    <td>Prasetyo</td>
+                                                    <td>Hadi</td>
+                                                    <td>Yogyakarta</td>
+                                                    <td>1988-12-25</td>
+                                                    <td>Married</td>
+                                                    <td>Katolik</td>
+                                                    <td>Male</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show" id="answer-asdf" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Contact Address Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <label for="id_personal" class="form-label">ID Personal</label>
+                                                <input type="number" class="form-control" name="id_personal" placeholder="Input ID Personal" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="type" class="form-label">Type</label>
+                                                <select class="form-select" name="type" required>
+                                                    <option value="">-- Pilih Type --</option>
+                                                    <option value="email">Email</option>
+                                                    <option value="phone_number">Phone Number</option>
+                                                    <option value="ktp_address">KTP Address</option>
+                                                    <option value="domisili_address">Domisili Address</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="value" class="form-label">Value</label>
+                                                <input type="text" class="form-control" name="value" placeholder="Input Value" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="is_primary" class="form-label">Is Primary</label>
+                                                <select class="form-select" name="is_primary" required>
+                                                    <option value="">-- Pilih --</option>
+                                                    <option value="1">Yes</option>
+                                                    <option value="0">No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-end">
+                                        <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Contact Address Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>ID Personal</th>
+                                                    <th>Type</th>
+                                                    <th>Value</th>
+                                                    <th>Is Primary</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>email</td>
+                                                    <td>ahmad@example.com</td>
+                                                    <td>Yes</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>1</td>
+                                                    <td>phone_number</td>
+                                                    <td>081234567890</td>
+                                                    <td>No</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>2</td>
+                                                    <td>email</td>
+                                                    <td>siti@example.com</td>
+                                                    <td>Yes</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>2</td>
+                                                    <td>ktp_address</td>
+                                                    <td>Jl. Merdeka 45, Jakarta</td>
+                                                    <td>No</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>3</td>
+                                                    <td>domisili_address</td>
+                                                    <td>Jl. Sudirman 12, Bandung</td>
+                                                    <td>Yes</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show" id="answer-jkl" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Personal Education Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <label for="id_personal" class="form-label">ID Personal</label>
+                                                <input type="number" class="form-control" name="id_personal" placeholder="Input ID Personal" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="id_level_education" class="form-label">Level Education</label>
+                                                <input type="number" class="form-control" name="id_level_education" placeholder="Input Level Education" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="id_education_discipline_or_major" class="form-label">Discipline / Major</label>
+                                                <input type="number" class="form-control" name="id_education_discipline_or_major" placeholder="Input Discipline or Major" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="id_institution" class="form-label">Institution</label>
+                                                <input type="number" class="form-control" name="id_institution" placeholder="Input Institution" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="start_date" class="form-label">Start Date</label>
+                                                <input type="date" class="form-control" name="start_date" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="end_date" class="form-label">End Date</label>
+                                                <input type="date" class="form-control" name="end_date" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="gpa" class="form-label">GPA</label>
+                                                <input type="number" step="0.01" class="form-control" name="gpa" placeholder="Input GPA">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="scale" class="form-label">Scale</label>
+                                                <input type="number" step="0.01" class="form-control" name="scale" placeholder="Input Scale">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-end">
+                                        <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Personal Education Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>ID Personal</th>
+                                                    <th>Level Education</th>
+                                                    <th>Discipline / Major</th>
+                                                    <th>Institution</th>
+                                                    <th>Start Date</th>
+                                                    <th>End Date</th>
+                                                    <th>GPA</th>
+                                                    <th>Scale</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>Bachelor</td>
+                                                    <td>Computer Science</td>
+                                                    <td>Universitas Indonesia</td>
+                                                    <td>2015-08-01</td>
+                                                    <td>2019-06-30</td>
+                                                    <td>3.75</td>
+                                                    <td>4.0</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>Master</td>
+                                                    <td>Business Administration</td>
+                                                    <td>Universitas Gadjah Mada</td>
+                                                    <td>2018-09-01</td>
+                                                    <td>2020-07-30</td>
+                                                    <td>3.90</td>
+                                                    <td>4.0</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>3</td>
+                                                    <td>High School</td>
+                                                    <td>Science</td>
+                                                    <td>SMA Negeri 1 Jakarta</td>
+                                                    <td>2012-07-01</td>
+                                                    <td>2015-06-30</td>
+                                                    <td>3.80</td>
+                                                    <td>4.0</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>1</td>
+                                                    <td>Master</td>
+                                                    <td>Information Systems</td>
+                                                    <td>Institut Teknologi Bandung</td>
+                                                    <td>2020-09-01</td>
+                                                    <td>2022-07-31</td>
+                                                    <td>3.85</td>
+                                                    <td>4.0</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>4</td>
+                                                    <td>Bachelor</td>
+                                                    <td>Electrical Engineering</td>
+                                                    <td>Universitas Diponegoro</td>
+                                                    <td>2014-08-01</td>
+                                                    <td>2018-06-30</td>
+                                                    <td>3.60</td>
+                                                    <td>4.0</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show" id="answer-iop" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Professional Experience Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <label for="id_personal" class="form-label">ID Personal</label>
+                                                <input type="number" class="form-control" name="id_personal" placeholder="Input ID Personal" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="employeer" class="form-label">Employeer</label>
+                                                <input type="text" class="form-control" name="employeer" placeholder="Input Employeer" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="employeer_location" class="form-label">Employeer Location</label>
+                                                <input type="text" class="form-control" name="employeer_location" placeholder="Input Location">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="posisi" class="form-label">Position</label>
+                                                <input type="text" class="form-control" name="posisi" placeholder="Input Position">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="start_date" class="form-label">Start Date</label>
+                                                <input type="date" class="form-control" name="start_date" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="end_date" class="form-label">End Date</label>
+                                                <input type="date" class="form-control" name="end_date">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="company_field" class="form-label">Company Field</label>
+                                                <input type="text" class="form-control" name="company_field" placeholder="Input Company Field">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="job_deescription" class="form-label">Job Description</label>
+                                                <input type="text" class="form-control" name="job_deescription" placeholder="Input Job Description">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="number_of_people_supervised" class="form-label">Number of People Supervised</label>
+                                                <input type="number" class="form-control" name="number_of_people_supervised" placeholder="Input Number">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="reason" class="form-label">Reason</label>
+                                                <input type="text" class="form-control" name="reason" placeholder="Input Reason">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="benefit_or_allowance_received" class="form-label">Benefit / Allowance Received</label>
+                                                <input type="text" class="form-control" name="benefit_or_allowance_received" placeholder="Input Benefit or Allowance">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-end">
+                                        <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Professional Experience Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>ID Personal</th>
+                                                    <th>Employeer</th>
+                                                    <th>Employeer Location</th>
+                                                    <th>Position</th>
+                                                    <th>Start Date</th>
+                                                    <th>End Date</th>
+                                                    <th>Company Field</th>
+                                                    <th>Job Description</th>
+                                                    <th>Number of People Supervised</th>
+                                                    <th>Reason</th>
+                                                    <th>Benefit / Allowance Received</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>PT ABC</td>
+                                                    <td>Jakarta</td>
+                                                    <td>Manager</td>
+                                                    <td>2018-01-01</td>
+                                                    <td>2020-12-31</td>
+                                                    <td>Finance</td>
+                                                    <td>Manage accounting team</td>
+                                                    <td>5</td>
+                                                    <td>Career advancement</td>
+                                                    <td>Bonus, Health Insurance</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>PT XYZ</td>
+                                                    <td>Surabaya</td>
+                                                    <td>Senior Developer</td>
+                                                    <td>2016-05-01</td>
+                                                    <td>2019-11-30</td>
+                                                    <td>IT</td>
+                                                    <td>Develop backend systems</td>
+                                                    <td>3</td>
+                                                    <td>Better opportunity</td>
+                                                    <td>Stock options</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>1</td>
+                                                    <td>PT DEF</td>
+                                                    <td>Bandung</td>
+                                                    <td>Team Lead</td>
+                                                    <td>2021-01-01</td>
+                                                    <td>2023-06-30</td>
+                                                    <td>IT</td>
+                                                    <td>Lead development team</td>
+                                                    <td>7</td>
+                                                    <td>Project completion</td>
+                                                    <td>Allowance, Bonus</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>3</td>
+                                                    <td>PT GHI</td>
+                                                    <td>Medan</td>
+                                                    <td>Analyst</td>
+                                                    <td>2017-03-01</td>
+                                                    <td>2020-08-31</td>
+                                                    <td>Marketing</td>
+                                                    <td>Market analysis</td>
+                                                    <td>2</td>
+                                                    <td>Personal growth</td>
+                                                    <td>Bonus</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>4</td>
+                                                    <td>PT JKL</td>
+                                                    <td>Yogyakarta</td>
+                                                    <td>Consultant</td>
+                                                    <td>2019-02-01</td>
+                                                    <td>2022-07-31</td>
+                                                    <td>Consulting</td>
+                                                    <td>Provide business solutions</td>
+                                                    <td>4</td>
+                                                    <td>Experience gain</td>
+                                                    <td>Bonus, Training</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show" id="answer-qwer" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Personal Course Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <label for="id_personal" class="form-label">ID Personal</label>
+                                                <input type="number" class="form-control" name="id_personal" placeholder="Input ID Personal" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="id_course_event" class="form-label">ID Course Event</label>
+                                                <input type="number" class="form-control" name="id_course_event" placeholder="Input ID Course Event" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-end">
+                                        <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Personal Course Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>ID Personal</th>
+                                                    <th>ID Course Event</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>101</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>102</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>1</td>
+                                                    <td>103</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>3</td>
+                                                    <td>104</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>4</td>
+                                                    <td>105</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show" id="answer-mnb" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Personal Family Member Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                        <div class="row mb-3">
+                                            <div class="col-md-4">
+                                                <label for="id_personal_employee" class="form-label">ID Personal Employee</label>
+                                                <input type="number" class="form-control" name="id_personal_employee" placeholder="Input ID Personal Employee" required>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="id_personal_dependent" class="form-label">ID Personal Dependent</label>
+                                                <input type="number" class="form-control" name="id_personal_dependent" placeholder="Input ID Personal Dependent" required>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="relationship" class="form-label">Relationship</label>
+                                                <select class="form-select" name="relationship" required>
+                                                    <option value="">-- Pilih Relationship --</option>
+                                                    <option value="spouse">Spouse</option>
+                                                    <option value="child 1">Child 1</option>
+                                                    <option value="child 2">Child 2</option>
+                                                    <option value="child 3">Child 3</option>
+                                                    <option value="child 4">Child 4</option>
+                                                    <option value="child 5">Child 5</option>
+                                                    <option value="mother">Mother</option>
+                                                    <option value="father">Father</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-2 mt-3">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="dependent" id="dependent">
+                                                    <label class="form-check-label" for="dependent">Dependent</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 mt-3">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="is_emergency_contact" id="is_emergency_contact">
+                                                    <label class="form-check-label" for="is_emergency_contact">Emergency Contact</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-end">
+                                        <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Personal Family Member Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>ID Personal Employee</th>
+                                                    <th>ID Personal Dependent</th>
+                                                    <th>Relationship</th>
+                                                    <th>Dependent</th>
+                                                    <th>Emergency Contact</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>Spouse</td>
+                                                    <td>Yes</td>
+                                                    <td>No</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>1</td>
+                                                    <td>3</td>
+                                                    <td>Child 1</td>
+                                                    <td>Yes</td>
+                                                    <td>Yes</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>2</td>
+                                                    <td>4</td>
+                                                    <td>Child 2</td>
+                                                    <td>No</td>
+                                                    <td>No</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>3</td>
+                                                    <td>5</td>
+                                                    <td>Father</td>
+                                                    <td>No</td>
+                                                    <td>Yes</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>4</td>
+                                                    <td>6</td>
+                                                    <td>Mother</td>
+                                                    <td>Yes</td>
+                                                    <td>No</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show" id="answer-ttt" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Person Medical Checkup Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                        <div class="row mb-3">
+                                            <div class="col-md-4">
+                                                <label for="id_personal" class="form-label">ID Personal</label>
+                                                <input type="number" class="form-control" name="id_personal" placeholder="Input ID Personal" required>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="value" class="form-label">Value</label>
+                                                <input type="text" class="form-control" name="value" placeholder="Input Value" required>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="date" class="form-label">Date</label>
+                                                <input type="date" class="form-control" name="date" required>
+                                            </div>
+                                            <div class="col-md-4 mt-3">
+                                                <label for="id_master_medical_checkup_parameter" class="form-label">Medical Checkup Parameter</label>
+                                                <input type="number" class="form-control" name="id_master_medical_checkup_parameter" placeholder="Input Parameter ID" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-end">
+                                        <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Person Medical Checkup Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>ID Personal</th>
+                                                    <th>Value</th>
+                                                    <th>Date</th>
+                                                    <th>Medical Checkup Parameter</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>Normal</td>
+                                                    <td>2025-08-22</td>
+                                                    <td>2</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>High</td>
+                                                    <td>2025-08-21</td>
+                                                    <td>1</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>3</td>
+                                                    <td>Low</td>
+                                                    <td>2025-08-20</td>
+                                                    <td>3</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show" id="answer-zfds" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Person Identification Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                        <div class="row mb-3">
+                                            <div class="col-md-4">
+                                                <label for="id_personal" class="form-label">ID Personal</label>
+                                                <input type="number" class="form-control" name="id_personal" placeholder="Input ID Personal" required>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="id_master_identification_type" class="form-label">Identification Type</label>
+                                                <input type="number" class="form-control" name="id_master_identification_type" placeholder="Input Identification Type ID" required>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="value" class="form-label">Value</label>
+                                                <input type="text" class="form-control" name="value" placeholder="Input Value" required>
+                                            </div>
+                                            <div class="col-md-4 mt-3">
+                                                <label for="start_date" class="form-label">Start Date</label>
+                                                <input type="date" class="form-control" name="start_date" required>
+                                            </div>
+                                            <div class="col-md-4 mt-3">
+                                                <label for="end_date" class="form-label">End Date</label>
+                                                <input type="date" class="form-control" name="end_date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-end">
+                                        <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Person Identification Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>ID Personal</th>
+                                                    <th>Identification Type</th>
+                                                    <th>Value</th>
+                                                    <th>Start Date</th>
+                                                    <th>End Date</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>123456789</td>
+                                                    <td>2025-01-01</td>
+                                                    <td>2030-01-01</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>1</td>
+                                                    <td>987654321</td>
+                                                    <td>2024-06-15</td>
+                                                    <td>2029-06-15</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>3</td>
+                                                    <td>3</td>
+                                                    <td>1122334455</td>
+                                                    <td>2023-03-10</td>
+                                                    <td>2028-03-10</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show" id="answer-yomah" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Personal Bank Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                        <div class="row mb-3">
+                                            <div class="col-md-4">
+                                                <label for="id_personal" class="form-label">ID Personal</label>
+                                                <input type="number" class="form-control" name="id_personal" placeholder="Input ID Personal" required>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="account_name" class="form-label">Account Name</label>
+                                                <input type="text" class="form-control" name="account_name" placeholder="Input Account Name" required>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="account_number" class="form-label">Account Number</label>
+                                                <input type="text" class="form-control" name="account_number" placeholder="Input Account Number" required>
+                                            </div>
+                                            <div class="col-md-4 mt-3">
+                                                <label for="active" class="form-label">Active</label>
+                                                <select class="form-select" name="active" required>
+                                                    <option value="">-- Pilih Status --</option>
+                                                    <option value="1">Active</option>
+                                                    <option value="0">Inactive</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-4 mt-3">
+                                                <label for="id_master_bank" class="form-label">Bank ID</label>
+                                                <input type="number" class="form-control" name="id_master_bank" placeholder="Input Bank ID" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-end">
+                                        <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>personal_bank Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>ID Personal</th>
+                                                    <th>Account Name</th>
+                                                    <th>Account Number</th>
+                                                    <th>Active</th>
+                                                    <th>Bank ID</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>John Doe</td>
+                                                    <td>1234567890</td>
+                                                    <td>Active</td>
+                                                    <td>2</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>Jane Smith</td>
+                                                    <td>9876543210</td>
+                                                    <td>Inactive</td>
+                                                    <td>1</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>3</td>
+                                                    <td>Michael Lee</td>
+                                                    <td>1122334455</td>
+                                                    <td>Active</td>
+                                                    <td>3</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show" id="answer-ptkp" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Employee PTKP Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                        <div class="row mb-3">
+                                            <div class="col-md-4">
+                                                <label for="id_employee" class="form-label">ID Employee</label>
+                                                <input type="number" class="form-control" name="id_employee" placeholder="Input ID Employee" required>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="id_master_ptkp" class="form-label">PTKP ID</label>
+                                                <input type="number" class="form-control" name="id_master_ptkp" placeholder="Input PTKP ID" required>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="start_date" class="form-label">Start Date</label>
+                                                <input type="date" class="form-control" name="start_date" required>
+                                            </div>
+                                            <div class="col-md-4 mt-3">
+                                                <label for="end_date" class="form-label">End Date</label>
+                                                <input type="date" class="form-control" name="end_date" required>
+                                            </div>
+                                            <div class="col-md-4 mt-3">
+                                                <label for="tax_method" class="form-label">Tax Method</label>
+                                                <select class="form-select" name="tax_method" required>
+                                                    <option value="">-- Pilih Tax Method --</option>
+                                                    <option value="gross">Gross</option>
+                                                    <option value="gross_up">Gross Up</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-end">
+                                        <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>employee_ptkp Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>ID Employee</th>
+                                                    <th>PTKP ID</th>
+                                                    <th>Start Date</th>
+                                                    <th>End Date</th>
+                                                    <th>Tax Method</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>101</td>
+                                                    <td>2</td>
+                                                    <td>2025-01-01</td>
+                                                    <td>2025-12-31</td>
+                                                    <td>Gross</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>102</td>
+                                                    <td>3</td>
+                                                    <td>2025-02-01</td>
+                                                    <td>2025-12-31</td>
+                                                    <td>Gross Up</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>103</td>
+                                                    <td>1</td>
+                                                    <td>2025-03-01</td>
+                                                    <td>2025-12-31</td>
+                                                    <td>Gross</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show" id="answer-iiii" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Personal Skill Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <label for="id_personal" class="form-label">ID Personal</label>
+                                                <input type="number" class="form-control" name="id_personal" placeholder="Input ID Personal" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="id_unit_skill" class="form-label">Unit Skill ID</label>
+                                                <input type="number" class="form-control" name="id_unit_skill" placeholder="Input Unit Skill ID" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-end">
+                                        <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Personal Skill Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>ID Personal</th>
+                                                    <th>Unit Skill ID</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>101</td>
+                                                    <td>5</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>102</td>
+                                                    <td>3</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>103</td>
+                                                    <td>1</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show" id="answer-jklop" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Assignment History Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                        <div class="row mb-3">
+                                            <div class="col-md-4">
+                                                <label for="id_employee" class="form-label">ID Employee</label>
+                                                <input type="number" class="form-control" name="id_employee" placeholder="Input ID Employee" required>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="id_master_pangkat_golongan" class="form-label">Pangkat Golongan ID</label>
+                                                <input type="number" class="form-control" name="id_master_pangkat_golongan" placeholder="Input Pangkat Golongan ID" required>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="id_master_position" class="form-label">Position ID</label>
+                                                <input type="number" class="form-control" name="id_master_position" placeholder="Input Position ID" required>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-4">
+                                                <label for="id_master_employee_type" class="form-label">Employee Type ID</label>
+                                                <input type="number" class="form-control" name="id_master_employee_type" placeholder="Input Employee Type ID" required>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="id_sk_header" class="form-label">SK Header ID</label>
+                                                <input type="number" class="form-control" name="id_sk_header" placeholder="Input SK Header ID" required>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="start_date" class="form-label">Start Date</label>
+                                                <input type="date" class="form-control" name="start_date" required>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-4">
+                                                <label for="end_date" class="form-label">End Date</label>
+                                                <input type="date" class="form-control" name="end_date">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="isPrimary" class="form-label">Is Primary</label>
+                                                <select class="form-select" name="isPrimary" required>
+                                                    <option value="">-- Pilih --</option>
+                                                    <option value="1">Yes</option>
+                                                    <option value="0">No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-end">
+                                        <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Assignment History Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>ID Employee</th>
+                                                    <th>Pangkat Golongan ID</th>
+                                                    <th>Position ID</th>
+                                                    <th>Employee Type ID</th>
+                                                    <th>SK Header ID</th>
+                                                    <th>Start Date</th>
+                                                    <th>End Date</th>
+                                                    <th>Is Primary</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>101</td>
+                                                    <td>3</td>
+                                                    <td>2</td>
+                                                    <td>1</td>
+                                                    <td>5</td>
+                                                    <td>2025-01-01</td>
+                                                    <td>2025-12-31</td>
+                                                    <td>Yes</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>102</td>
+                                                    <td>2</td>
+                                                    <td>4</td>
+                                                    <td>2</td>
+                                                    <td>6</td>
+                                                    <td>2024-05-01</td>
+                                                    <td>2025-05-01</td>
+                                                    <td>No</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>103</td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>4</td>
+                                                    <td>2023-07-01</td>
+                                                    <td>2024-07-01</td>
+                                                    <td>Yes</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show" id="answer-dddd" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">SK Detail Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                        <div class="row mb-3">
+                                            <div class="col-md-4">
+                                                <label for="id_sk_header" class="form-label">SK Header ID</label>
+                                                <input type="number" class="form-control" name="id_sk_header" placeholder="Input SK Header ID" required>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="id_employee" class="form-label">Employee ID</label>
+                                                <input type="number" class="form-control" name="id_employee" placeholder="Input Employee ID" required>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="remarks" class="form-label">Remarks</label>
+                                                <input type="text" class="form-control" name="remarks" placeholder="Input remarks">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-end">
+                                        <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>SK Detail Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>SK Header ID</th>
+                                                    <th>Employee ID</th>
+                                                    <th>Remarks</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>101</td>
+                                                    <td>1001</td>
+                                                    <td>Promosi jabatan</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>102</td>
+                                                    <td>1002</td>
+                                                    <td>Mutasi departemen</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>103</td>
+                                                    <td>1003</td>
+                                                    <td>Penugasan khusus</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
