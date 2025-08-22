@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usulan Kenaikan CRUD</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light text-dark">
+
+  <div class="container py-5">
+    <h2 class="mb-4 text-center">Usulan Kenaikan</h2>
+
+    <!-- List Table -->
+    <div class="card shadow-sm mb-4">
+      <div class="card-header bg-white border-bottom">
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="fw-bold">Usulan Kenaikan List</span>
+          <button class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#formModal">+ Add Data</button>
+        </div>
+      </div>
+      <div class="card-body p-0">
+        <div class="table-responsive">
+          <table class="table table-striped table-hover align-middle mb-0">
+            <thead class="table-light">
+              <tr>
+                <th>ID</th>
+                <th>Tipe Kenaikan</th>
+                <th>ID Employee</th>
+                <th>Description</th>
+                <th>Initiation Date</th>
+                <th>Created By</th>
+                <th>Created At</th>
+                <th>Usia SK</th>
+                <th>ID SK Type</th>
+                <th>Tgl SK Terakhir</th>
+                <th>Masa Kerja Calon Pegawai</th>
+                <th>Masa Kerja Pegawai Organik</th>
+                <th>Masa Kerja Pangkat Golongan</th>
+                <th>Pangkat Saat Ini</th>
+                <th>Pangkat Baru</th>
+                <th>Gaji Saat Ini</th>
+                <th>Gaji Baru</th>
+                <th>Nilai Appraisal Terakhir</th>
+                <th>Ada Sanksi</th>
+                <th>Status</th>
+                <th>SK Number</th>
+                <th class="text-center">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Pangkat Regular</td>
+                <td>2001</td>
+                <td>Kenaikan reguler tahunan</td>
+                <td>2025-08-01</td>
+                <td>100</td>
+                <td>2025-08-02</td>
+                <td>3</td>
+                <td>2</td>
+                <td>2024-07-01</td>
+                <td>1</td>
+                <td>5</td>
+                <td>2</td>
+                <td>III/B</td>
+                <td>III/C</td>
+                <td>5000000</td>
+                <td>5500000</td>
+                <td>90</td>
+                <td>No</td>
+                <td>in_review</td>
+                <td>SK-2025-09</td>
+                <td class="text-center">
+                  <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#formModal">Edit</button>
+                  <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Form -->
+    <div class="modal fade" id="formModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+          <div class="modal-header bg-white border-bottom">
+            <h5 class="modal-title">Add / Edit Data</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form>
+            <div class="modal-body">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">ID Usulan Kenaikan</label>
+                  <input type="number" class="form-control" name="id_usulan_kenaikan" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Tipe Kenaikan</label>
+                  <select class="form-select" name="tipe_kenaikan" required>
+                    <option value="Masa Berkala">Masa Berkala</option>
+                    <option value="Pangkat Regular">Pangkat Regular</option>
+                    <option value="Pangkat Luar Biasa">Pangkat Luar Biasa</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">ID Employee</label>
+                  <input type="number" class="form-control" name="id_employee" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Description</label>
+                  <input type="text" class="form-control" name="description">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Initiation Date</label>
+                  <input type="date" class="form-control" name="initiation_date" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Created By</label>
+                  <input type="number" class="form-control" name="created_by" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Created At</label>
+                  <input type="date" class="form-control" name="created_at" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Usia SK</label>
+                  <input type="number" step="0.01" class="form-control" name="usia_sk">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">ID SK Type</label>
+                  <input type="number" class="form-control" name="id_sk_type">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Tgl SK Terakhir</label>
+                  <input type="date" class="form-control" name="tgl_sk_terakhir">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Masa Kerja Calon Pegawai</label>
+                  <input type="number" class="form-control" name="masa_kerja_calon_pegawai">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Masa Kerja Pegawai Organik</label>
+                  <input type="number" class="form-control" name="masa_kerja_pegawai_organik">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Masa Kerja Pangkat Golongan</label>
+                  <input type="number" class="form-control" name="masa_kerja_pangkat_golongan">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Pangkat Saat Ini</label>
+                  <input type="text" class="form-control" name="pangkat_saat_ini">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Pangkat Baru</label>
+                  <input type="text" class="form-control" name="pangkat_baru">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Gaji Saat Ini</label>
+                  <input type="number" step="0.01" class="form-control" name="gaji_saat_ini">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Gaji Baru</label>
+                  <input type="number" step="0.01" class="form-control" name="gaji_baru">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Nilai Appraisal Terakhir</label>
+                  <input type="number" step="0.01" class="form-control" name="nilai_appraisal_terakhir">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Ada Sanksi</label>
+                  <select class="form-select" name="ada_sanksi">
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Status</label>
+                  <select class="form-select" name="status">
+                    <option value="draft">Draft</option>
+                    <option value="in_review">In Review</option>
+                    <option value="reject">Reject</option>
+                    <option value="approve">Approve</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">SK Number</label>
+                  <input type="text" class="form-control" name="sk_number">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer bg-white border-top">
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-dark">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
