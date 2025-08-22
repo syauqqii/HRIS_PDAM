@@ -122,115 +122,92 @@
                         </div>
                     </div>
 
-                    <!-- Permission Request Management -->
-                    <div class="tab-pane fade" id="PERMISSION_REQUEST" role="tabpanel">
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show active" id="PERMISSION_REQUEST" role="tabpanel">
                         <div class="card">
                             <div class="card-header">
-                                <h5 class="mb-0">Permission Request Management</h5>
+                                <h5 class="mb-0">Permission Request Detail Management</h5>
                             </div>
                             <div class="card-body">
-                                <form id="PermissionGroupForm">
-                                    <div id="PermissionDetails">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
                                         <div class="row mb-3">
-                                            <!-- Pilih Karyawan -->
                                             <div class="col-md-6">
-                                                <label for="employee" class="form-label">Pilih Karyawan</label>
-                                                <select class="form-select" id="employee" name="employee" required>
-                                                <option value="">-- Pilih Karyawan --</option>
-                                                <option value="1">Ahmad Fauzi</option>
-                                                <option value="2">Budi Santoso</option>
-                                                <option value="3">Citra Dewi</option>
-                                                </select>
+                                                <label class="form-label">Setup Absence Code ID</label>
+                                                <input type="number" class="form-control" name="id_setup_absence_code" required>
                                             </div>
-
-                                            <!-- Pilih Period -->
                                             <div class="col-md-6">
-                                                <label for="period" class="form-label">Pilih Period</label>
-                                                <select class="form-select" id="period" name="period" required>
-                                                <option value="">-- Pilih Period --</option>
-                                                <option value="jan">Januari 2025</option>
-                                                <option value="feb">Februari 2025</option>
-                                                <option value="mar">Maret 2025</option>
-                                                </select>
+                                                <label class="form-label">Employee ID</label>
+                                                <input type="number" class="form-control" name="id_employee" required>
                                             </div>
-                                            </div>
-
-                                            <div class="row mb-3">
-                                            <!-- Tanggal -->
                                             <div class="col-md-6">
-                                                <label for="date" class="form-label">Tanggal</label>
-                                                <input type="date" class="form-control" id="date" name="date" required>
+                                                <label class="form-label">Period ID</label>
+                                                <input type="number" class="form-control" name="id_period" required>
                                             </div>
-
-                                            <!-- Reason -->
                                             <div class="col-md-6">
-                                                <label for="reason" class="form-label">Alasan</label>
-                                                <input type="text" class="form-control" id="reason" name="reason" placeholder="Masukkan alasan..." required>
+                                                <label class="form-label">Date</label>
+                                                <input type="date" class="form-control" name="date" required>
                                             </div>
-                                            </div>
-
-                                            <div class="row mb-3">
-                                            <!-- Status -->
                                             <div class="col-md-6">
-                                                <label for="status" class="form-label">Status</label>
-                                                <select class="form-select" id="status" name="status" required>
-                                                <option value="">-- Pilih Status --</option>
-                                                <option value="draft">Draft</option>
-                                                <option value="in_review">In Review</option>
-                                                <option value="reject">Reject</option>
-                                                <option value="approve">Approve</option>
+                                                <label class="form-label">Reason</label>
+                                                <input type="text" class="form-control" name="reason" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">Status</label>
+                                                <select class="form-select" name="status" required>
+                                                    <option value="">-- Pilih Status --</option>
+                                                    <option value="draft">Draft</option>
+                                                    <option value="in_review">In Review</option>
+                                                    <option value="reject">Reject</option>
+                                                    <option value="approve">Approve</option>
                                                 </select>
                                             </div>
                                         </div>
+                                    </div>
                                     <div class="text-end">
-                                    <button type="submit" class="btn btn-primary">Add Data</button>
+                                        <button type="submit" class="btn btn-primary">Add Data</button>
                                     </div>
                                 </form>
 
-                                <!-- Permission Groups List -->
+                                <!-- Answer Groups List -->
                                 <div class="mt-4">
-                                    <h6>Permission Request List</h6>
+                                    <h6>Permission Request Detail List</h6>
                                     <div class="table-responsive">
                                         <table class="table table-striped">
                                             <thead>
                                                 <tr>
                                                     <th>ID</th>
-                                                    <th>Name</th>
-                                                    <th>Actual In</th>
-                                                    <th>Actual Out</th>
+                                                    <th>Setup Absence Code ID</th>
+                                                    <th>Employee ID</th>
+                                                    <th>Period ID</th>
+                                                    <th>Date</th>
+                                                    <th>Reason</th>
+                                                    <th>Status</th>
                                                     <th>Action</th>
                                                 </tr>
-                                                </thead>
-                                                <tbody>
+                                            </thead>
+                                            <tbody>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td>Morning Shift</td>
-                                                    <td>08:00</td>
-                                                    <td>16:00</td>
+                                                    <td>101</td>
+                                                    <td>201</td>
+                                                    <td>301</td>
+                                                    <td>2025-08-22</td>
+                                                    <td>Urgent personal matter</td>
+                                                    <td>draft</td>
                                                     <td>
-                                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
-                                                    <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>Night Shift</td>
-                                                    <td>22:00</td>
-                                                    <td>06:00</td>
-                                                    <td>
-                                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
-                                                    <button class="btn btn-sm btn-outline-secondary">Delete</button>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-
+                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
-                </div>
 
                 <!-- Presensi Management -->
                 <div class="tab-pane fade" id="PRESENSI" role="tabpanel">

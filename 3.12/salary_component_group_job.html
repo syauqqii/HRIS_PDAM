@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salary Component Group CRUD</title>
+  <title>Salary Component Group Job CRUD</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light text-dark">
 
   <div class="container py-5">
-    <h2 class="mb-4 text-center">Salary Component Group</h2>
+    <h2 class="mb-4 text-center">Salary Component Group Job</h2>
 
     <!-- List Table -->
     <div class="card shadow-sm mb-4">
       <div class="card-header bg-white border-bottom">
         <div class="d-flex justify-content-between align-items-center">
-          <span class="fw-bold">Salary Component Group List</span>
+          <span class="fw-bold">Salary Component Group Job List</span>
           <button class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#formModal">+ Add Data</button>
         </div>
       </div>
@@ -25,20 +25,26 @@
             <thead class="table-light">
               <tr>
                 <th>ID</th>
-                <th>Code</th>
+                <th>Job ID</th>
+                <th>Employee Type ID</th>
                 <th>Description</th>
                 <th>Start Date</th>
                 <th>End Date</th>
+                <th>Component Group ID</th>
+                <th>Value Deduction</th>
                 <th class="text-center">Actions</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><a href="./group/salary_component_group_detail.html">1</a></td>
-                <td>SCG001</td>
-                <td>Basic Salary Components</td>
+                <td>1</td>
+                <td>101</td>
+                <td>2</td>
+                <td>Senior Developer</td>
                 <td>2025-01-01</td>
                 <td>2025-12-31</td>
+                <td>1</td>
+                <td>500</td>
                 <td class="text-center">
                   <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#formModal">Edit</button>
                   <button class="btn btn-sm btn-outline-secondary">Delete</button>
@@ -61,21 +67,33 @@
           <form>
             <div class="modal-body">
               <div class="row g-3">
-                <div class="col-md-6">
-                  <label class="form-label">Code</label>
-                  <input type="text" class="form-control" name="code" required>
+                <div class="col-md-4">
+                  <label class="form-label">Job ID</label>
+                  <input type="number" class="form-control" name="id_job" required>
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label">Employee Type ID</label>
+                  <input type="number" class="form-control" name="id_employee_type" required>
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label">Component Group ID</label>
+                  <input type="number" class="form-control" name="id_component_group" required>
                 </div>
                 <div class="col-md-6">
                   <label class="form-label">Description</label>
-                  <input type="text" class="form-control" name="description" required>
+                  <input type="text" class="form-control" name="description">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-3">
                   <label class="form-label">Start Date</label>
-                  <input type="date" class="form-control" name="start_date" required>
+                  <input type="date" class="form-control" name="start_date">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-3">
                   <label class="form-label">End Date</label>
-                  <input type="date" class="form-control" name="end_date" required>
+                  <input type="date" class="form-control" name="end_date">
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label">Value Deduction</label>
+                  <input type="number" class="form-control" name="value_deduction">
                 </div>
               </div>
             </div>

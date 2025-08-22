@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salary Component Group CRUD</title>
+  <title>Amount Register CRUD</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light text-dark">
 
   <div class="container py-5">
-    <h2 class="mb-4 text-center">Salary Component Group</h2>
+    <h2 class="mb-4 text-center">Amount Register</h2>
 
     <!-- List Table -->
     <div class="card shadow-sm mb-4">
       <div class="card-header bg-white border-bottom">
         <div class="d-flex justify-content-between align-items-center">
-          <span class="fw-bold">Salary Component Group List</span>
+          <span class="fw-bold">Amount Register List</span>
           <button class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#formModal">+ Add Data</button>
         </div>
       </div>
@@ -25,20 +25,22 @@
             <thead class="table-light">
               <tr>
                 <th>ID</th>
-                <th>Code</th>
-                <th>Description</th>
-                <th>Start Date</th>
-                <th>End Date</th>
+                <th>Employee ID</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Processed</th>
+                <th>Salary Component ID</th>
                 <th class="text-center">Actions</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><a href="./group/salary_component_group_detail.html">1</a></td>
-                <td>SCG001</td>
-                <td>Basic Salary Components</td>
-                <td>2025-01-01</td>
-                <td>2025-12-31</td>
+                <td>1</td>
+                <td>101</td>
+                <td>2025-08-22</td>
+                <td>1500.00</td>
+                <td>true</td>
+                <td>201</td>
                 <td class="text-center">
                   <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#formModal">Edit</button>
                   <button class="btn btn-sm btn-outline-secondary">Delete</button>
@@ -62,20 +64,28 @@
             <div class="modal-body">
               <div class="row g-3">
                 <div class="col-md-6">
-                  <label class="form-label">Code</label>
-                  <input type="text" class="form-control" name="code" required>
+                  <label class="form-label">Employee ID</label>
+                  <input type="number" class="form-control" name="id_employee" required>
                 </div>
                 <div class="col-md-6">
-                  <label class="form-label">Description</label>
-                  <input type="text" class="form-control" name="description" required>
+                  <label class="form-label">Date</label>
+                  <input type="date" class="form-control" name="date" required>
                 </div>
                 <div class="col-md-6">
-                  <label class="form-label">Start Date</label>
-                  <input type="date" class="form-control" name="start_date" required>
+                  <label class="form-label">Amount</label>
+                  <input type="number" class="form-control" step="0.01" name="amount" required>
                 </div>
                 <div class="col-md-6">
-                  <label class="form-label">End Date</label>
-                  <input type="date" class="form-control" name="end_date" required>
+                  <label class="form-label">Processed</label>
+                  <select class="form-select" name="processed" required>
+                    <option value="">-- Pilih Status --</option>
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Salary Component ID</label>
+                  <input type="number" class="form-control" name="id_salary_component" required>
                 </div>
               </div>
             </div>
