@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absence Code Mapping</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/style.css">
+</head>
+<body>
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                    <a 
+                        href="file:///C:/Users/Dimas-Syauqi/OneDrive%20-%20PT%20WCS%20ABYAKTA%20NAWASENA/Documents/Working%20Directory/PDAM/web%20view/3.5.Proses%20Administrasi%20Kehadiran%20Karyawan/setup_absence_code.html" 
+                        class="nav-link active" 
+                        role="tab"
+                    >
+                        Kembali
+                    </a>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Setup Absence Code : OFF</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                            <button class="nav-link active" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#ANSWER_GROUP" type="button" role="tab">Absence Code Mapping</button>
+                            <button class="nav-link" id="permission-response-tab" data-bs-toggle="pill" data-bs-target="#PERMISSION_REQUEST" type="button" role="tab">Permission Request</button>
+                            <button class="nav-link" id="presensi-response-tab" data-bs-toggle="pill" data-bs-target="#PRESENSI" type="button" role="tab">Presensi</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9">
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <!-- Absence Code Mapping Management -->
+                    <div class="tab-pane fade show active" id="ANSWER_GROUP" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Absence Code Mapping Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="shift_name" class="form-label">Shift Name</label>
+                                            <select class="form-select" name="shift_name" required>
+                                            <option value="">-- Pilih Shift --</option>
+                                            <option value="morning">Morning Shift</option>
+                                            <option value="evening">Evening Shift</option>
+                                            <option value="night">Night Shift</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <label for="actual_in" class="form-label">Actual In</label>
+                                            <input type="time" class="form-control" id="actual_in" name="actual_in" required>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <label for="actual_out" class="form-label">Actual Out</label>
+                                            <input type="time" class="form-control" id="actual_out" name="actual_out" required>
+                                        </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="text-end">
+                                    <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Absence Code Mapping List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Name</th>
+                                                    <th>Actual In</th>
+                                                    <th>Actual Out</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Morning Shift</td>
+                                                    <td>08:00</td>
+                                                    <td>16:00</td>
+                                                    <td>
+                                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                    <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Night Shift</td>
+                                                    <td>22:00</td>
+                                                    <td>06:00</td>
+                                                    <td>
+                                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                    <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Permission Request Management -->
+                    <div class="tab-pane fade" id="PERMISSION_REQUEST" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Permission Request Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="PermissionGroupForm">
+                                    <div id="PermissionDetails">
+                                        <div class="row mb-3">
+                                            <!-- Pilih Karyawan -->
+                                            <div class="col-md-6">
+                                                <label for="employee" class="form-label">Pilih Karyawan</label>
+                                                <select class="form-select" id="employee" name="employee" required>
+                                                <option value="">-- Pilih Karyawan --</option>
+                                                <option value="1">Ahmad Fauzi</option>
+                                                <option value="2">Budi Santoso</option>
+                                                <option value="3">Citra Dewi</option>
+                                                </select>
+                                            </div>
+
+                                            <!-- Pilih Period -->
+                                            <div class="col-md-6">
+                                                <label for="period" class="form-label">Pilih Period</label>
+                                                <select class="form-select" id="period" name="period" required>
+                                                <option value="">-- Pilih Period --</option>
+                                                <option value="jan">Januari 2025</option>
+                                                <option value="feb">Februari 2025</option>
+                                                <option value="mar">Maret 2025</option>
+                                                </select>
+                                            </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                            <!-- Tanggal -->
+                                            <div class="col-md-6">
+                                                <label for="date" class="form-label">Tanggal</label>
+                                                <input type="date" class="form-control" id="date" name="date" required>
+                                            </div>
+
+                                            <!-- Reason -->
+                                            <div class="col-md-6">
+                                                <label for="reason" class="form-label">Alasan</label>
+                                                <input type="text" class="form-control" id="reason" name="reason" placeholder="Masukkan alasan..." required>
+                                            </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                            <!-- Status -->
+                                            <div class="col-md-6">
+                                                <label for="status" class="form-label">Status</label>
+                                                <select class="form-select" id="status" name="status" required>
+                                                <option value="">-- Pilih Status --</option>
+                                                <option value="draft">Draft</option>
+                                                <option value="in_review">In Review</option>
+                                                <option value="reject">Reject</option>
+                                                <option value="approve">Approve</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    <div class="text-end">
+                                    <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Permission Groups List -->
+                                <div class="mt-4">
+                                    <h6>Permission Request List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Name</th>
+                                                    <th>Actual In</th>
+                                                    <th>Actual Out</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Morning Shift</td>
+                                                    <td>08:00</td>
+                                                    <td>16:00</td>
+                                                    <td>
+                                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                    <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Night Shift</td>
+                                                    <td>22:00</td>
+                                                    <td>06:00</td>
+                                                    <td>
+                                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                    <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Presensi Management -->
+                <div class="tab-pane fade" id="PRESENSI" role="tabpanel">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Presensi Management</h5>
+                        </div>
+                        <div class="card-body">
+                            <form id="presensiGroupForm">
+                                <div id="presensiDetails">
+                                    <!-- Form Input -->
+                                    <div class="row mb-3">
+                                    <!-- Pilih Karyawan -->
+                                    <div class="col-md-6">
+                                        <label for="employee" class="form-label">Pilih Karyawan</label>
+                                        <select class="form-select" id="employee" name="employee" required>
+                                        <option value="">-- Pilih Karyawan --</option>
+                                        <option value="1">Ahmad Fauzi</option>
+                                        <option value="2">Budi Santoso</option>
+                                        <option value="3">Citra Dewi</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Tanggal -->
+                                    <div class="col-md-6">
+                                        <label for="date" class="form-label">Tanggal</label>
+                                        <input type="date" class="form-control" id="date" name="date" required>
+                                    </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                    <!-- Clock In Schedule -->
+                                    <div class="col-md-6">
+                                        <label for="clock_in_schedule" class="form-label">Clock In Schedule</label>
+                                        <input type="time" class="form-control" id="clock_in_schedule" name="clock_in_schedule" required>
+                                    </div>
+
+                                    <!-- Clock Out Schedule -->
+                                    <div class="col-md-6">
+                                        <label for="clock_out_schedule" class="form-label">Clock Out Schedule</label>
+                                        <input type="time" class="form-control" id="clock_out_schedule" name="clock_out_schedule" required>
+                                    </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                    <!-- Clock In Actual -->
+                                    <div class="col-md-6">
+                                        <label for="clock_in_actual" class="form-label">Clock In Actual</label>
+                                        <input type="time" class="form-control" id="clock_in_actual" name="clock_in_actual">
+                                    </div>
+
+                                    <!-- Clock Out Actual -->
+                                    <div class="col-md-6">
+                                        <label for="clock_out_actual" class="form-label">Clock Out Actual</label>
+                                        <input type="time" class="form-control" id="clock_out_actual" name="clock_out_actual">
+                                    </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                    <!-- Shift Type -->
+                                    <div class="col-md-6">
+                                        <label for="shift_type" class="form-label">Shift</label>
+                                        <select class="form-select" id="shift_type" name="shift_type" required>
+                                        <option value="">-- Pilih Shift --</option>
+                                        <option value="shift">Shift</option>
+                                        <option value="non_shift">Non-Shift</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Status -->
+                                    <div class="col-md-6">
+                                        <label for="status" class="form-label">Status</label>
+                                        <select class="form-select" id="status" name="status" required>
+                                        <option value="">-- Pilih Status --</option>
+                                        <option value="draft">Draft</option>
+                                        <option value="in_review">In Review</option>
+                                        <option value="reject">Reject</option>
+                                        <option value="approve">Approve</option>
+                                        </select>
+                                    </div>
+                                    </div>
+                                <div class="text-end">
+                                <button type="submit" class="btn btn-primary">Add Data</button>
+                                </div>
+                            </form>
+
+                            <!-- Presensi Groups List -->
+                            <div class="mt-4">
+                                <h6>Presensi List</h6>
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover align-middle">
+                                        <thead class="table-light">
+                                            <tr>
+                                            <th>ID</th>
+                                            <th>Date</th>
+                                            <th>Clock In Schedule</th>
+                                            <th>Clock Out Schedule</th>
+                                            <th>Clock In Actual</th>
+                                            <th>Clock Out Actual</th>
+                                            <th>Employee</th>
+                                            <th>Overday</th>
+                                            <th>Public Holiday</th>
+                                            <th>Holiday</th>
+                                            <th>Leave</th>
+                                            <th>Shift</th>
+                                            <th>Lat In</th>
+                                            <th>Long In</th>
+                                            <th>Lat Out</th>
+                                            <th>Long Out</th>
+                                            <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                            <td>1</td>
+                                            <td>2025-08-21</td>
+                                            <td>08:00</td>
+                                            <td>16:00</td>
+                                            <td>08:05</td>
+                                            <td>16:10</td>
+                                            <td>Ahmad Fauzi</td>
+                                            <td>false</td>
+                                            <td>false</td>
+                                            <td>false</td>
+                                            <td>false</td>
+                                            <td>Shift</td>
+                                            <td>-7.2504</td>
+                                            <td>112.7688</td>
+                                            <td>-7.2502</td>
+                                            <td>112.7690</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                <button class="btn btn-sm btn-outline-danger">Delete</button>
+                                            </td>
+                                            </tr>
+                                            <tr>
+                                            <td>2</td>
+                                            <td>2025-08-21</td>
+                                            <td>22:00</td>
+                                            <td>06:00</td>
+                                            <td>22:05</td>
+                                            <td>06:15</td>
+                                            <td>Budi Santoso</td>
+                                            <td>true</td>
+                                            <td>false</td>
+                                            <td>false</td>
+                                            <td>false</td>
+                                            <td>Shift</td>
+                                            <td>-7.2510</td>
+                                            <td>112.7695</td>
+                                            <td>-7.2512</td>
+                                            <td>112.7697</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                <button class="btn btn-sm btn-outline-danger">Delete</button>
+                                            </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- add here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

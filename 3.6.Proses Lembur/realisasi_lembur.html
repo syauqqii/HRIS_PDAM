@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realisasi Lembur CRUD</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light text-dark">
+
+  <div class="container py-5">
+    <h2 class="mb-4 text-center">Realisasi Lembur</h2>
+
+    <!-- List Table -->
+    <div class="card shadow-sm mb-4">
+      <div class="card-header bg-white border-bottom">
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="fw-bold">Realisasi Lembur List</span>
+          <button class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#formModal">+ Add Data</button>
+        </div>
+      </div>
+      <div class="card-body p-0">
+        <div class="table-responsive">
+          <table class="table table-striped table-hover align-middle mb-0">
+            <thead class="table-light">
+              <tr>
+                <th>ID</th>
+                <th>ID SPL</th>
+                <th>Actual Start</th>
+                <th>Actual End</th>
+                <th>Lokasi Mulai</th>
+                <th>Latitude Start</th>
+                <th>Longitude Start</th>
+                <th>Latitude End</th>
+                <th>Longitude End</th>
+                <th class="text-center">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>101</td>
+                <td>2025-08-22 18:00</td>
+                <td>2025-08-22 22:00</td>
+                <td>Kantor Pusat</td>
+                <td>-6.2000</td>
+                <td>106.8167</td>
+                <td>-6.2100</td>
+                <td>106.8200</td>
+                <td class="text-center">
+                  <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#formModal">Edit</button>
+                  <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Form -->
+    <div class="modal fade" id="formModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+          <div class="modal-header bg-white border-bottom">
+            <h5 class="modal-title">Add / Edit Data</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form>
+            <div class="modal-body">
+              <div class="row g-3">
+                
+                <div class="col-md-6">
+                  <label class="form-label">ID Realisasi Lembur</label>
+                  <input type="number" class="form-control" name="id_realisasi_lembur" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">ID SPL</label>
+                  <input type="number" class="form-control" name="id_spl" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Actual Start</label>
+                  <input type="datetime-local" class="form-control" name="actual_start" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Actual End</label>
+                  <input type="datetime-local" class="form-control" name="actual_end" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Lokasi Mulai</label>
+                  <input type="text" class="form-control" name="lokasi_mulai">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Latitude Start</label>
+                  <input type="number" step="0.0001" class="form-control" name="location_latitude_start">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Longitude Start</label>
+                  <input type="number" step="0.0001" class="form-control" name="location_longitude_start">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Latitude End</label>
+                  <input type="number" step="0.0001" class="form-control" name="location_latitude_end">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Longitude End</label>
+                  <input type="number" step="0.0001" class="form-control" name="location_longitude_end">
+                </div>
+
+              </div>
+            </div>
+            <div class="modal-footer bg-white border-top">
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-dark">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

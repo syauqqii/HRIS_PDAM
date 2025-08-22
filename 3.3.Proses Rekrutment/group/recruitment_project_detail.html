@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire Management System</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/style.css">
+</head>
+<body>
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                    <a 
+                        href="file:///C:/Users/Dimas-Syauqi/OneDrive%20-%20PT%20WCS%20ABYAKTA%20NAWASENA/Documents/Working%20Directory/PDAM/web%20view/3.3.Proses%20Rekrutment/recruitment_project.html" 
+                        class="nav-link active" 
+                        role="tab"
+                    >
+                        Kembali
+                    </a>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Recruitment Project ID: 1</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                            <button class="nav-link active" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-group" type="button" role="tab">Recruitment Project Detail</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9">
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show active" id="answer-group" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Recruitment Project Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                        <div class="row answerDetail mb-3">
+                                            <div class="col-md-6">
+                                                <select class="form-select" name="job_activity" required>
+                                                    <option value="">-- Pilih Job Activity --</option>
+                                                    <option value="CEO">Direktur Utama (CEO)</option>
+                                                    <option value="HRM">Kepala HRD</option>
+                                                    <option value="OPR">Operator Produksi</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-primary">Add Data</button>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Recruitment Project Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Job Activity Name</th>
+                                                <th>Job Activity Description</th>
+                                                <th>Duration</th>
+                                                <th>Unit</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td><a href="file:///C:/Users/Dimas-Syauqi/OneDrive%20-%20PT%20WCS%20ABYAKTA%20NAWASENA/Documents/Working%20Directory/PDAM/web%20view/3.3.Proses%20Rekrutment/group/media_publish_and_application_aplicant.html">1</a></td>
+                                                <td>Rating Scale</td>
+                                                <td>Excellent, Good, Average, Poor, Very Poor</td>
+                                                <td>30</td>
+                                                <td>Minutes</td>
+                                                <td>
+                                                <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Yes/No Options</td>
+                                                <td>Yes, No</td>
+                                                <td>1</td>
+                                                <td>Hour</td>
+                                                <td>
+                                                <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Multiple Choice</td>
+                                                <td>Option A, Option B, Option C, Option D</td>
+                                                <td>2</td>
+                                                <td>Days</td>
+                                                <td>
+                                                <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Employee Response Tab -->
+                    <div class="tab-pane fade" id="employee-response" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Job Education Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="employeeResponseForm">
+                                    <div id="responseDetails" class="row">
+                                        <!-- Level Education -->
+                                        <div class="mb-3 col-md-6">
+                                        <label class="form-label">Pilih Level Education</label>
+                                        <select class="form-select" name="level_education" required>
+                                            <option value="">-- Pilih Level Education --</option>
+                                            <option value="SMA/SMK">SMA/SMK</option>
+                                            <option value="Diploma">Diploma</option>
+                                            <option value="S1">S1</option>
+                                            <option value="S2">S2</option>
+                                            <option value="S3">S3</option>
+                                        </select>
+                                        </div>
+
+                                        <!-- Education Discipline or Major -->
+                                        <div class="mb-3 col-md-6">
+                                        <label class="form-label">Select Education Discipline or Major</label>
+                                        <select class="form-select" name="education_major" required>
+                                            <option value="">-- Pilih Education Discipline or Major --</option>
+                                            <option value="Teknik Informatika">Teknik Informatika</option>
+                                            <option value="Manajemen">Manajemen</option>
+                                            <option value="Akuntansi">Akuntansi</option>
+                                            <option value="Hukum">Hukum</option>
+                                            <option value="Ilmu Komunikasi">Ilmu Komunikasi</option>
+                                        </select>
+                                        </div>
+
+                                        <!-- Is Priority -->
+                                        <div class="mb-3 col-12">
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="isPriority" name="isPriority">
+                                            <label class="form-check-label" for="isPriority">Is Priority</label>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">Add Data</button>
+                                </form>
+                                <!-- Employee Responses List -->
+                                <div class="mt-4">
+                                    <h6>Job Education List</h6>
+                                    <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Level Education</th>
+                                            <th>Education Discipline or Major</th>
+                                            <th>Is Priority</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>S1</td>
+                                            <td>Teknik Informatika</td>
+                                            <td>Yes</td>
+                                            <td>
+                                            <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                            <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>S2</td>
+                                            <td>Manajemen</td>
+                                            <td>No</td>
+                                            <td>
+                                            <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                            <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Diploma</td>
+                                            <td>Akuntansi</td>
+                                            <td>Yes</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

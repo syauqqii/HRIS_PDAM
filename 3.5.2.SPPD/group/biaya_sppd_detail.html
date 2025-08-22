@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biaya SPPD Detail</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/style.css">
+</head>
+<body>
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                    <a 
+                        href="sppd_detail.html" 
+                        class="nav-link active" 
+                        role="tab"
+                    >
+                        Kembali
+                    </a>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">SPPD Detail ID: 1</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                            <button class="nav-link active" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-group" type="button" role="tab">Biaya SPPD Detail</button>
+                            <button class="nav-link" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#activity_report" type="button" role="tab">Activity Report</button>
+                            <button class="nav-link" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#daily_journal" type="button" role="tab">Daily Journal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9">
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show active" id="answer-group" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Biaya SPPD Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="id_sppd_detail" class="form-label">ID SPPD Detail</label>
+                                            <input type="number" class="form-control" id="id_sppd_detail" name="id_SPPD_Detail" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="id_cost_type" class="form-label">Cost Type</label>
+                                            <select class="form-select" id="id_cost_type" name="id_Cost_Type" required>
+                                                <option value="">-- Pilih Cost Type --</option>
+                                                <option value="1">Yes</option>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="amount" class="form-label">Amount</label>
+                                            <input type="number" step="0.01" class="form-control" id="amount" name="Amount" required>
+                                        </div>
+                                    </div>
+                                    </div>
+
+                                    <div class="text-end">
+                                    <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Biaya SPPD Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>ID SPPD Detail</th>
+                                                    <th>Cost Type</th>
+                                                    <th>Amount</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>10</td>
+                                                    <td>Yes</td>
+                                                    <td>150000.00</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show" id="activity_report" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Activity Report Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="id_employee_sppd" class="form-label">ID Employee SPPD</label>
+                                            <input type="number" class="form-control" id="id_employee_sppd" name="id_employee_sppd" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="activity_summary" class="form-label">Activity Summary</label>
+                                            <input type="text" class="form-control" id="activity_summary" name="activity_summary" placeholder="Ringkasan aktivitas" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="verification_status" class="form-label">Verification Status</label>
+                                            <select class="form-select" id="verification_status" name="verification_status" required>
+                                                <option value="">-- Pilih Status --</option>
+                                                <option value="Pending">Pending</option>
+                                                <option value="Verified">Verified</option>
+                                                <option value="Rejected">Rejected</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="submit_date" class="form-label">Submit Date</label>
+                                            <input type="date" class="form-control" id="submit_date" name="submit_date" required>
+                                        </div>
+                                    </div>
+                                    </div>
+
+                                    <div class="text-end">
+                                    <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Activity Report Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>ID Employee SPPD</th>
+                                                    <th>Activity Summary</th>
+                                                    <th>Verification Status</th>
+                                                    <th>Submit Date</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>1001</td>
+                                                    <td>Mengikuti rapat koordinasi proyek</td>
+                                                    <td>Verified</td>
+                                                    <td>2025-08-21</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show active" id="daily_journal" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Daily Journal Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="id_SPPD_Detail" class="form-label">ID SPPD Detail</label>
+                                            <input type="number" class="form-control" id="id_SPPD_Detail" name="id_SPPD_Detail" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="date" class="form-label">Date</label>
+                                            <input type="date" class="form-control" id="date" name="date" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="documentation_photo" class="form-label">Documentation Photo (URL)</label>
+                                            <input type="text" class="form-control" id="documentation_photo" name="documentation_photo" placeholder="Link foto dokumentasi">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="activity_description" class="form-label">Activity Description</label>
+                                            <input type="text" class="form-control" id="activity_description" name="activity_description" placeholder="Deskripsi aktivitas" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="location_latitude" class="form-label">Location Latitude</label>
+                                            <input type="number" step="0.000001" class="form-control" id="location_latitude" name="location_latitude" placeholder="Latitude lokasi">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="location_longitude" class="form-label">Location Longitude</label>
+                                            <input type="number" step="0.000001" class="form-control" id="location_longitude" name="location_longitude" placeholder="Longitude lokasi">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="notes" class="form-label">Notes</label>
+                                            <input type="text" class="form-control" id="notes" name="notes" placeholder="Catatan tambahan">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="verification_status" class="form-label">Verification Status</label>
+                                            <select class="form-select" id="verification_status" name="verification_status" required>
+                                                <option value="">-- Pilih Status --</option>
+                                                <option value="Pending">Pending</option>
+                                                <option value="Verified">Verified</option>
+                                                <option value="Rejected">Rejected</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="submission_time" class="form-label">Submission Time</label>
+                                            <input type="datetime-local" class="form-control" id="submission_time" name="submission_time" required>
+                                        </div>
+                                    </div>
+                                    </div>
+
+                                    <div class="text-end">
+                                    <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Daily Journal Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>ID SPPD Detail</th>
+                                                    <th>Date</th>
+                                                    <th>Documentation Photo</th>
+                                                    <th>Activity Description</th>
+                                                    <th>Location Latitude</th>
+                                                    <th>Location Longitude</th>
+                                                    <th>Notes</th>
+                                                    <th>Verification Status</th>
+                                                    <th>Submission Time</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>101</td>
+                                                    <td>2025-08-20</td>
+                                                    <td>https://example.com/photo1.jpg</td>
+                                                    <td>Survey lokasi proyek</td>
+                                                    <td>-7.250445</td>
+                                                    <td>112.768845</td>
+                                                    <td>Cuaca cerah</td>
+                                                    <td>Pending</td>
+                                                    <td>2025-08-20T10:30</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

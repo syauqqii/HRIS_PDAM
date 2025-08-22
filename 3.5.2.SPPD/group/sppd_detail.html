@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPPD Detail</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/style.css">
+</head>
+<body>
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                    <a 
+                        href="../sppd.html" 
+                        class="nav-link active" 
+                        role="tab"
+                    >
+                        Kembali
+                    </a>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">SPPD Detail ID: 1</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                            <button class="nav-link active" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-group" type="button" role="tab">SPPD Detail</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9">
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show active" id="answer-group" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">SPPD Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="id_sppd" class="form-label">ID SPPD</label>
+                                            <input type="number" class="form-control" id="id_sppd" name="id_sppd" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="id_employee" class="form-label">ID Employee</label>
+                                            <input type="number" class="form-control" id="id_employee" name="id_employee" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="status" class="form-label">Status</label>
+                                            <select class="form-select" id="status" name="status" required>
+                                                <option value="">-- Pilih Status --</option>
+                                                <option value="Draft">Draft</option>
+                                                <option value="InReview">InReview</option>
+                                                <option value="Reject">Reject</option>
+                                                <option value="Approve">Approve</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="approved_at" class="form-label">Approved At</label>
+                                            <input type="date" class="form-control" id="approved_at" name="Approved_At">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="days" class="form-label">Days</label>
+                                            <input type="number" class="form-control" id="days" name="Days">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="is_information_sent" class="form-label">Information Sent</label>
+                                            <select class="form-select" id="is_information_sent" name="is_Information_sent" required>
+                                                <option value="1">Yes</option>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="is_fund_received" class="form-label">Fund Received</label>
+                                            <select class="form-select" id="is_fund_received" name="is_Fund_Received" required>
+                                                <option value="1">Yes</option>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    </div>
+
+                                    <div class="text-end">
+                                    <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>SPPD Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>ID SPPD</th>
+                                                    <th>ID Employee</th>
+                                                    <th>Status</th>
+                                                    <th>Approved At</th>
+                                                    <th>Days</th>
+                                                    <th>Information Sent</th>
+                                                    <th>Fund Received</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><a href="./biaya_sppd_detail.html">1</a></td>
+                                                    <td>101</td>
+                                                    <td>2001</td>
+                                                    <td>Draft</td>
+                                                    <td>2025-08-21</td>
+                                                    <td>3</td>
+                                                    <td>Yes</td>
+                                                    <td>No</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

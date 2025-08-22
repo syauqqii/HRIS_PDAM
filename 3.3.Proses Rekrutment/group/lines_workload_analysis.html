@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lines Workload Analysis</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/style.css">
+</head>
+<body>
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                    <a 
+                        href="file:///C:/Users/Dimas-Syauqi/OneDrive%20-%20PT%20WCS%20ABYAKTA%20NAWASENA/Documents/Working%20Directory/PDAM/web%20view/3.3.Proses%20Rekrutment/workload_analysis.html" 
+                        class="nav-link active" 
+                        role="tab"
+                    >
+                        Kembali
+                    </a>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Workload Analysis ID : 1</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                            <button class="nav-link active" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-group" type="button" role="tab">Lines Workload Analysis</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9">
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show active" id="answer-group" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Lines Workload Analysis Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                    <div class="row answerDetail mb-3">
+                                        <div class="col-md-6">
+                                        <label for="job_activity" class="form-label">Job Activity</label>
+                                        <select class="form-select" id="job_activity" name="job_activity" required>
+                                            <option value="">-- Select Job Activity --</option>
+                                            <option value="CEO">Direktur Utama (CEO)</option>
+                                            <option value="HRM">Kepala HRD</option>
+                                            <option value="OPR">Operator Produksi</option>
+                                        </select>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                        <label for="frekuensi" class="form-label">Frekuensi</label>
+                                        <input type="text" class="form-control" id="frekuensi" name="frekuensi" placeholder="Masukkan frekuensi" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                        <label for="duration" class="form-label">Duration</label>
+                                        <input type="text" class="form-control" id="duration" name="duration" placeholder="Masukkan durasi" required>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                        <label for="equivalent" class="form-label">Equivalent</label>
+                                        <input type="text" class="form-control" id="equivalent" name="equivalent" placeholder="Masukkan equivalent" required>
+                                        </div>
+                                    </div>
+                                    </div>
+
+                                    <div class="text-end">
+                                    <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Lines Workload Analysis List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Job Activity</th>
+                                                    <th>Frekuensi</th>
+                                                    <th>Duration</th>
+                                                    <th>Equivalent</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>-</td>
+                                                    <td>2025</td>
+                                                    <td>10.000.000</td>
+                                                    <td>10.000.000</td>
+                                                    <td>
+                                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                    <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>-</td>
+                                                    <td>2025</td>
+                                                    <td>2.000.000</td>
+                                                    <td>2.000.000</td>
+                                                    <td>
+                                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                    <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>-</td>
+                                                    <td>2025</td>
+                                                    <td>3.000.000</td>
+                                                    <td>3.000.000</td>
+                                                    <td>
+                                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                    <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,77 @@
+:root {
+    --primary-black: #000000;
+    --secondary-gray: #6c757d;
+    --light-gray: #f8f9fa;
+    --white: #ffffff;
+    --border-gray: #dee2e6;
+}
+
+body {
+    background-color: var(--light-gray);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    background-color: var(--primary-black) !important;
+    border-bottom: 2px solid var(--secondary-gray);
+}
+
+.card {
+    border: 1px solid var(--border-gray);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    background-color: var(--primary-black);
+    color: var(--white);
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.btn-primary {
+    background-color: var(--primary-black);
+    border-color: var(--primary-black);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-gray);
+    border-color: var(--secondary-gray);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-gray);
+    border-color: var(--secondary-gray);
+}
+
+.btn-outline-secondary {
+    color: var(--secondary-gray);
+    border-color: var(--secondary-gray);
+}
+
+.form-control:focus {
+    border-color: var(--primary-black);
+    box-shadow: 0 0 0 0.2rem rgba(0,0,0,0.25);
+}
+
+.form-select:focus {
+    border-color: var(--primary-black);
+    box-shadow: 0 0 0 0.2rem rgba(0,0,0,0.25);
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--primary-black);
+}
+
+.table th {
+    background-color: var(--primary-black);
+    color: var(--white);
+    border-color: var(--border-gray);
+}
+
+.table td {
+    border-color: var(--border-gray);
+}
+
+.section-divider {
+    border-bottom: 2px solid var(--border-gray);
+    margin: 2rem 0;
+}

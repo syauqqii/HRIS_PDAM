@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Period Detail</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/style.css">
+</head>
+<body>
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                    <a 
+                        href="file:///C:/Users/Dimas-Syauqi/OneDrive%20-%20PT%20WCS%20ABYAKTA%20NAWASENA/Documents/Working%20Directory/PDAM/web%20view/3.5.Proses%20Administrasi%20Kehadiran%20Karyawan/master_period.html" 
+                        class="nav-link active" 
+                        role="tab"
+                    >
+                        Kembali
+                    </a>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Master Period : TX-00001</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                            <button class="nav-link active" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-group" type="button" role="tab">Master Period Detail</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9">
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show active" id="answer-group" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Master Period Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                    <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="start_date" class="form-label">Start Date</label>
+                                        <input type="date" class="form-control" id="start_date" name="start_date" required>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <label for="end_date" class="form-label">End Date</label>
+                                        <input type="date" class="form-control" id="end_date" name="end_date" required>
+                                    </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="period_type" class="form-label">Period Type</label>
+                                        <select class="form-select" id="period_type" name="period_type" required>
+                                        <option value="">-- Select Period Type --</option>
+                                        <option value="daily">Daily</option>
+                                        <option value="weekly">Weekly</option>
+                                        <option value="monthly">Monthly</option>
+                                        <option value="yearly">Yearly</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <label for="status" class="form-label">Status</label>
+                                        <select class="form-select" id="status" name="status" required>
+                                        <option value="">-- Select Status --</option>
+                                        <option value="active">Active</option>
+                                        <option value="inactive">Inactive</option>
+                                        <option value="pending">Pending</option>
+                                        </select>
+                                    </div>
+                                    </div>
+                                    </div>
+
+                                    <div class="text-end">
+                                    <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Master Period Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Start Date</th>
+                                                    <th>End Date</th>
+                                                    <th>Period Type</th>
+                                                    <th>Status</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>20/02/2020</td>
+                                                    <td>10/08/2020</td>
+                                                    <td>payroll</td>
+                                                    <td>close</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>30/10/2020</td>
+                                                    <td>12/04/2022</td>
+                                                    <td>payroll</td>
+                                                    <td>close</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

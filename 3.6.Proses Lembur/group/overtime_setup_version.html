@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overtime Setup Version</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/style.css">
+</head>
+<body>
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                    <a 
+                        href="../overtime_setup.html" 
+                        class="nav-link active" 
+                        role="tab"
+                    >
+                        Kembali
+                    </a>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Overtime Setup ID: 1</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                            <button class="nav-link active" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-group" type="button" role="tab">Overtime Setup Version</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9">
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show active" id="answer-group" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Overtime Setup Version Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                    <div class="row mb-3">
+
+                                        <div class="col-md-6">
+                                            <label for="id_overtime_setup_version" class="form-label">ID Overtime Setup Version</label>
+                                            <input type="number" class="form-control" id="id_overtime_setup_version" name="id_overtime_setup_version" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="id_overtime_setup" class="form-label">Overtime Setup ID</label>
+                                            <input type="number" class="form-control" id="id_overtime_setup" name="id_overtime_setup" value="1" readonly>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="valid_from" class="form-label">Valid From</label>
+                                            <input type="date" class="form-control" id="valid_from" name="valid_from" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="valid_to" class="form-label">Valid To</label>
+                                            <input type="date" class="form-control" id="valid_to" name="valid_to" required>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+                                    <div class="text-end">
+                                    <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Overtime Setup Version Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Overtime Setup ID</th>
+                                                    <th>Valid From</th>
+                                                    <th>Valid To</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><a href="overtime_setup_factor.html">1</a></td>
+                                                    <td>1</td>
+                                                    <td>2025-08-01</td>
+                                                    <td>2025-08-31</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

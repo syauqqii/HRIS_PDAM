@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Biaya SPPD Detail</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/style.css">
+</head>
+<body>
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                    <a 
+                        href="../setup_biaya_sppd.html" 
+                        class="nav-link active" 
+                        role="tab"
+                    >
+                        Kembali
+                    </a>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Setup Biaya SPPD ID: 1</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                            <button class="nav-link active" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-group" type="button" role="tab">Setup Biaya SPPD Detail</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9">
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show active" id="answer-group" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Setup Biaya SPPD Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                        <div class="row mb-3">
+                                            <!-- DATA_ADD / EDIT -->
+                                            <div class="col-md-6">
+                                                <label for="id_Setup_BIAYA_SPPD" class="form-label">ID Setup Biaya SPPD</label>
+                                                <input type="number" class="form-control" id="id_Setup_BIAYA_SPPD" name="id_Setup_BIAYA_SPPD" placeholder="Masukkan ID Setup Biaya SPPD" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="id_job_title" class="form-label">ID Job Title</label>
+                                                <input type="number" class="form-control" id="id_job_title" name="id_job_title" placeholder="Masukkan ID Job Title" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="id_Cost_Type" class="form-label">ID Cost Type</label>
+                                                <select class="form-select" id="id_Cost_Type" name="id_Cost_Type" required>
+                                                    <option value="">-- Pilih Cost Type --</option>
+                                                    <option value="1">Transport</option>
+                                                    <option value="2">Akomodasi</option>
+                                                    <option value="3">Konsumsi</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="Amount" class="form-label">Amount</label>
+                                                <input type="number" step="0.01" class="form-control" id="Amount" name="Amount" placeholder="Masukkan Amount" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="OverNIght" class="form-label">Overnight</label>
+                                                <select class="form-select" id="OverNIght" name="OverNIght" required>
+                                                    <option value="">-- Pilih Overnight --</option>
+                                                    <option value="1">Yes</option>
+                                                    <option value="0">No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-end">
+                                        <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>Setup Biaya SPPD Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>ID Setup Biaya SPPD</th>
+                                                    <th>ID Job Title</th>
+                                                    <th>ID Cost Type</th>
+                                                    <th>Amount</th>
+                                                    <th>Overnight</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</a></td>
+                                                    <td>10</td>
+                                                    <td>3</td>
+                                                    <td>2</td>
+                                                    <td>500000.00</td>
+                                                    <td>Yes</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>11</td>
+                                                    <td>4</td>
+                                                    <td>1</td>
+                                                    <td>750000.00</td>
+                                                    <td>No</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>12</td>
+                                                    <td>5</td>
+                                                    <td>3</td>
+                                                    <td>300000.00</td>
+                                                    <td>Yes</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
