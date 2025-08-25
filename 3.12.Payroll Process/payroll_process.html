@@ -55,7 +55,7 @@
               <div class="row g-3">
                 <div class="col-md-4">
                   <label class="form-label">ID Payroll Process</label>
-                  <input type="number" class="form-control" id="id_payroll_process" required>
+                  <input type="number" class="form-control" id="id_payroll_process" readonly>
                 </div>
                 <div class="col-md-4">
                   <label class="form-label">Master Period</label>
@@ -98,6 +98,8 @@
       { id: 2, masterPeriod: 202502, employeeType: "Contract", description: "February Payroll", date: "2025-02-28", annualize: false }
     ];
 
+    let lastId = payrollData.length ? payrollData[payrollData.length - 1].id : 0;
+
     const tableBody = document.getElementById("payrollTableBody");
     const formModal = new bootstrap.Modal(document.getElementById("formModal"));
     const payrollForm = document.getElementById("payrollForm");
@@ -114,10 +116,8 @@
             <td>${item.date}</td>
             <td>${item.annualize ? "Yes" : "No"}</td>
             <td class="text-center">
-              <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#formModal">Generate</button>
-              <button class="btn btn-sm btn-outline-secondary">Process</button>
               <button class="btn btn-sm btn-outline-secondary" onclick="editData(${index})">Edit</button>
-              <button class="btn btn-sm btn-outline-secondary" onclick="deleteData(${index})">Delete</button>
+              <button class="btn btn-sm btn-outline-danger" onclick="deleteData(${index})">Delete</button>
             </td>
           </tr>
         `;
@@ -128,6 +128,10 @@
       document.getElementById("modalTitle").innerText = "Add Data";
       document.getElementById("editIndex").value = "";
       payrollForm.reset();
+
+      // set auto ID
+      document.getElementById("id_payroll_process").value = lastId + 1;
+
       formModal.show();
     }
 
@@ -153,7 +157,7 @@
 
     payrollForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      const id = document.getElementById("id_payroll_process").value;
+      const id = parseInt(document.getElementById("id_payroll_process").value);
       const masterPeriod = document.getElementById("id_master_period").value;
       const employeeType = document.getElementById("id_employee_type").value;
       const description = document.getElementById("description").value;
@@ -164,6 +168,7 @@
 
       if (editIndex === "") {
         payrollData.push({ id, masterPeriod, employeeType, description, date, annualize });
+        lastId = id; // update last id tiap tambah
       } else {
         payrollData[editIndex] = { id, masterPeriod, employeeType, description, date, annualize };
       }

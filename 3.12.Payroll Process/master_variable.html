@@ -16,7 +16,7 @@
       <div class="card-header bg-white border-bottom">
         <div class="d-flex justify-content-between align-items-center">
           <span class="fw-bold">Master Variable List</span>
-          <button class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#formModal">+ Add Data</button>
+          <button class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#formModal" onclick="openAddModal()">+ Add Data</button>
         </div>
       </div>
       <div class="card-body p-0">
@@ -31,18 +31,7 @@
                 <th class="text-center">Actions</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Employee Count</td>
-                <td>SELECT COUNT(*) FROM employees</td>
-                <td>/api/employee/count</td>
-                <td class="text-center">
-                  <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#formModal">Edit</button>
-                  <button class="btn btn-sm btn-outline-secondary">Delete</button>
-                </td>
-              </tr>
-            </tbody>
+            <tbody id="tableBody"></tbody>
           </table>
         </div>
       </div>
@@ -53,23 +42,24 @@
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content border-0 shadow">
           <div class="modal-header bg-white border-bottom">
-            <h5 class="modal-title">Add / Edit Data</h5>
+            <h5 class="modal-title" id="modalTitle">Add Data</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <form>
+          <form id="dataForm">
             <div class="modal-body">
+              <input type="hidden" id="editId">
               <div class="row g-3">
                 <div class="col-md-6">
                   <label class="form-label">Name</label>
-                  <input type="text" class="form-control" name="name" required>
+                  <input type="text" class="form-control" id="name" required>
                 </div>
                 <div class="col-md-6">
                   <label class="form-label">Query</label>
-                  <input type="text" class="form-control" name="query" required>
+                  <input type="text" class="form-control" id="query" required>
                 </div>
                 <div class="col-md-6">
                   <label class="form-label">API</label>
-                  <input type="text" class="form-control" name="api" required>
+                  <input type="text" class="form-control" id="api" required>
                 </div>
               </div>
             </div>
@@ -82,6 +72,82 @@
       </div>
     </div>
   </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script>
+    let data = [
+      {id: 1, name: "Employee Count", query: "SELECT COUNT(*) FROM employees", api: "/api/employee/count"}
+    ];
+    let currentId = 2; 
+
+    function renderTable() {
+      const tbody = document.getElementById("tableBody");
+      tbody.innerHTML = "";
+      data.forEach(item => {
+        tbody.innerHTML += `
+          <tr>
+            <td>${item.id}</td>
+            <td>${item.name}</td>
+            <td>${item.query}</td>
+            <td>${item.api}</td>
+            <td class="text-center">
+              <button class="btn btn-sm btn-outline-dark" onclick="openEditModal(${item.id})" data-bs-toggle="modal" data-bs-target="#formModal">Edit</button>
+              <button class="btn btn-sm btn-outline-secondary" onclick="deleteData(${item.id})">Delete</button>
+            </td>
+          </tr>
+        `;
+      });
+    }
+
+    function openAddModal() {
+      document.getElementById("modalTitle").innerText = "Add Data";
+      document.getElementById("editId").value = "";
+      document.getElementById("name").value = "";
+      document.getElementById("query").value = "";
+      document.getElementById("api").value = "";
+    }
+
+    function openEditModal(id) {
+      const item = data.find(d => d.id === id);
+      document.getElementById("modalTitle").innerText = "Edit Data";
+      document.getElementById("editId").value = item.id;
+      document.getElementById("name").value = item.name;
+      document.getElementById("query").value = item.query;
+      document.getElementById("api").value = item.api;
+    }
+
+    function deleteData(id) {
+      if (confirm("Yakin mau hapus data ini?")) {
+        data = data.filter(item => item.id !== id);
+        renderTable();
+      }
+    }
+
+    document.getElementById("dataForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const editId = document.getElementById("editId").value;
+      const name = document.getElementById("name").value;
+      const query = document.getElementById("query").value;
+      const api = document.getElementById("api").value;
+
+      if (editId) {
+        // update
+        const item = data.find(d => d.id == editId);
+        item.name = name;
+        item.query = query;
+        item.api = api;
+      } else {
+        // add new
+        data.push({id: currentId++, name, query, api});
+      }
+
+      renderTable();
+      const modal = bootstrap.Modal.getInstance(document.getElementById("formModal"));
+      modal.hide();
+    });
+
+    // initial render
+    renderTable();
+  </script>
 </body>
 </html>
