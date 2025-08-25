@@ -6,6 +6,8 @@
     <title>Personal Data</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../public/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <div class="container-fluid mt-4">
@@ -24,7 +26,7 @@
                 <br>
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="mb-0">ID: 1</h5>
+                        <h5 class="mb-0">ID: 1</h5>``
                     </div>
                     <div class="card-body">
                         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
@@ -58,6 +60,27 @@
                             </div>
                             <div class="card-body">
                                 <form id="answerGroupForm">
+                                    <!-- Foto Upload di Tengah -->
+                                    <div class="text-center mb-4">
+                                    <div style="position: relative; width: 150px; height: 150px; margin: auto;">
+                                        <!-- Foto Profil -->
+                                        <img id="photoPreview" src="../../public/profile.png"
+                                            alt="Preview Foto"
+                                            style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 2px solid #ddd;">
+                                        
+                                        <!-- Tombol Pensil -->
+                                        <label for="photoInput" 
+                                            style="position: absolute; top: 8px; right: 8px; 
+                                                    border-radius: 50%; background-color: var(--bs-primary, #0d6efd); 
+                                                    height: 30px; width: 30px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                                            <i class="fa fa-pencil" style="color: #fff; font-size: 14px;"></i>
+                                        </label>
+
+                                        <!-- Input File Hidden -->
+                                        <input type="file" id="photoInput" accept="image/*" style="display: none;">
+                                    </div>
+                                    </div>
+
                                     <div id="answerDetails">
                                         <div class="row mb-3">
                                             <div class="col-md-6">
@@ -1610,5 +1633,16 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const photoInput = document.getElementById("photoInput");
+        const photoPreview = document.getElementById("photoPreview");
+
+        photoInput.addEventListener("change", function() {
+            const file = this.files[0];
+            if (file) {
+                photoPreview.src = URL.createObjectURL(file);
+            }
+        });
+    </script>
 </body>
 </html>
