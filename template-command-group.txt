@@ -1,0 +1,125 @@
+bantu buatkan ERD ke form dengan format HTML yang saya berikan, ada sebuah variable yang harus diisi yaitu NAMA_TABLE, FIELD_TABLE, CONTOH_DUMMY_DATA, dan DATA_ADD / EDIT. Berikut adalah format HTML yang harus diisi:
+langsung kasih file html-nya tanpa penjelasan, karena saya sudah mengerti cara menggunakannya.
+
+ERD saya :
+Tabel: SK Detail		
+		
+Atribut	Type Data	Keterangan
+id_sk_detail	INT	PK
+id_sk_header	INT	FK
+id_employee	INT	FK
+remarks	VARCHAR	
+
+INFO_TAMBAHAN : "ID: 1"
+
+ini template saya :
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{NAMA_TABLE}</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/style.css">
+</head>
+<body>
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                    <a 
+                        href="../index.html" 
+                        class="nav-link active" 
+                        role="tab"
+                    >
+                        Kembali
+                    </a>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">${INFO_TAMBAHAN}</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                            <button class="nav-link active" id="answer-group-tab" data-bs-toggle="pill" data-bs-target="#answer-group" type="button" role="tab">{NAMA_TABLE}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9">
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <!-- Answer Group Tab -->
+                    <div class="tab-pane fade show active" id="answer-group" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">{NAMA_TABLE} Detail Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="answerGroupForm">
+                                    <div id="answerDetails">
+                                    <div class="row mb-3">
+                                        ${DATA_ADD / EDIT}
+                                        <!-- CONTOH DATA -->
+                                        <!-- <div class="col-md-6">
+                                            <label for="job_activity" class="form-label">Setup Time</label>
+                                            <select class="form-select" name="job_activity" required>
+                                                <option value="">-- Pilih Setup Time --</option>
+                                                <option value="CEO">Direktur Utama (CEO)</option>
+                                                <option value="HRM">Kepala HRD</option>
+                                                <option value="OPR">Operator Produksi</option>
+                                            </select>
+                                        </div>
+                                    
+                                        <div class="col-md-6">
+                                            <label for="duration" class="form-label">Sequence</label>
+                                            <input type="text" class="form-control" id="duration" name="duration" placeholder="Input sequence" required>
+                                        </div> -->
+                                    </div>
+                                    </div>
+
+                                    <div class="text-end">
+                                    <button type="submit" class="btn btn-primary">Add Data</button>
+                                    </div>
+                                </form>
+
+                                <!-- Answer Groups List -->
+                                <div class="mt-4">
+                                    <h6>{NAMA_TABLE} Detail List</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    ${FIELD_TABLE}
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    ${CONTOH_DUMMY_DATA}
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
