@@ -116,8 +116,10 @@
             <td>${item.date}</td>
             <td>${item.annualize ? "Yes" : "No"}</td>
             <td class="text-center">
+              <button class="btn btn-sm btn-outline-dark"">Generate</button>
+              <button class="btn btn-sm btn-outline-secondary"">Process</button>
               <button class="btn btn-sm btn-outline-secondary" onclick="editData(${index})">Edit</button>
-              <button class="btn btn-sm btn-outline-danger" onclick="deleteData(${index})">Delete</button>
+              <button class="btn btn-sm btn-outline-secondary" onclick="deleteData(${index})">Delete</button>
             </td>
           </tr>
         `;
