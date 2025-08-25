@@ -16,7 +16,7 @@
       <div class="card-header bg-white border-bottom">
         <div class="d-flex justify-content-between align-items-center">
           <span class="fw-bold">Payroll Process List</span>
-          <button class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#formModal">+ Add Data</button>
+          <button class="btn btn-dark btn-sm" onclick="openForm()">+ Add Data</button>
         </div>
       </div>
       <div class="card-body p-0">
@@ -33,33 +33,8 @@
                 <th class="text-center">Actions</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td><a href="./group/payroll_process_area.html">1</a></td>
-                <td>202501</td>
-                <td>Full-Time</td>
-                <td>January Payroll Run</td>
-                <td>2025-01-31</td>
-                <td>Yes</td>
-                <td class="text-center">
-                  <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#formModal">Generate</button>
-                  <button class="btn btn-sm btn-outline-secondary">Process</button>
-                  <button class="btn btn-sm btn-outline-secondary">Delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>202502</td>
-                <td>Contract</td>
-                <td>February Payroll</td>
-                <td>2025-02-28</td>
-                <td>No</td>
-                <td class="text-center">
-                  <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#formModal">Generate</button>
-                  <button class="btn btn-sm btn-outline-secondary">Process</button>
-                  <button class="btn btn-sm btn-outline-secondary">Delete</button>
-                </td>
-              </tr>
+            <tbody id="payrollTableBody">
+              <!-- Data render dari JS -->
             </tbody>
           </table>
         </div>
@@ -71,35 +46,36 @@
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content border-0 shadow">
           <div class="modal-header bg-white border-bottom">
-            <h5 class="modal-title">Add / Edit Data</h5>
+            <h5 class="modal-title" id="modalTitle">Add Data</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <form>
+          <form id="payrollForm">
             <div class="modal-body">
+              <input type="hidden" id="editIndex">
               <div class="row g-3">
                 <div class="col-md-4">
                   <label class="form-label">ID Payroll Process</label>
-                  <input type="number" class="form-control" name="id_payroll_process" required>
+                  <input type="number" class="form-control" id="id_payroll_process" required>
                 </div>
                 <div class="col-md-4">
-                  <label class="form-label">ID Master Period</label>
-                  <input type="number" class="form-control" name="id_master_period" required>
+                  <label class="form-label">Master Period</label>
+                  <input type="number" class="form-control" id="id_master_period" required>
                 </div>
                 <div class="col-md-4">
-                  <label class="form-label">ID Employee Type</label>
-                  <input type="number" class="form-control" name="id_employee_type" required>
+                  <label class="form-label">Employee Type</label>
+                  <input type="text" class="form-control" id="id_employee_type" required>
                 </div>
                 <div class="col-md-12">
                   <label class="form-label">Description</label>
-                  <input type="text" class="form-control" name="description">
+                  <input type="text" class="form-control" id="description">
                 </div>
                 <div class="col-md-6">
                   <label class="form-label">Date</label>
-                  <input type="date" class="form-control" name="date" required>
+                  <input type="date" class="form-control" id="date" required>
                 </div>
                 <div class="col-md-6">
                   <label class="form-label">Annualize</label>
-                  <select class="form-select" name="annualize" required>
+                  <select class="form-select" id="annualize" required>
                     <option value="true">Yes</option>
                     <option value="false">No</option>
                   </select>
@@ -107,14 +83,96 @@
               </div>
             </div>
             <div class="modal-footer bg-white border-top">
-              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Generate</button>
-              <button type="submit" class="btn btn-dark">Process</button>
+              <button type="submit" class="btn btn-dark" id="saveBtn">Save</button>
             </div>
           </form>
         </div>
       </div>
     </div>
   </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script>
+    let payrollData = [
+      { id: 1, masterPeriod: 202501, employeeType: "Full-Time", description: "January Payroll Run", date: "2025-01-31", annualize: true },
+      { id: 2, masterPeriod: 202502, employeeType: "Contract", description: "February Payroll", date: "2025-02-28", annualize: false }
+    ];
+
+    const tableBody = document.getElementById("payrollTableBody");
+    const formModal = new bootstrap.Modal(document.getElementById("formModal"));
+    const payrollForm = document.getElementById("payrollForm");
+
+    function renderTable() {
+      tableBody.innerHTML = "";
+      payrollData.forEach((item, index) => {
+        tableBody.innerHTML += `
+          <tr>
+            <td>${item.id}</td>
+            <td>${item.masterPeriod}</td>
+            <td>${item.employeeType}</td>
+            <td>${item.description}</td>
+            <td>${item.date}</td>
+            <td>${item.annualize ? "Yes" : "No"}</td>
+            <td class="text-center">
+              <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#formModal">Generate</button>
+              <button class="btn btn-sm btn-outline-secondary">Process</button>
+              <button class="btn btn-sm btn-outline-secondary" onclick="editData(${index})">Edit</button>
+              <button class="btn btn-sm btn-outline-secondary" onclick="deleteData(${index})">Delete</button>
+            </td>
+          </tr>
+        `;
+      });
+    }
+
+    function openForm() {
+      document.getElementById("modalTitle").innerText = "Add Data";
+      document.getElementById("editIndex").value = "";
+      payrollForm.reset();
+      formModal.show();
+    }
+
+    function editData(index) {
+      const item = payrollData[index];
+      document.getElementById("modalTitle").innerText = "Edit Data";
+      document.getElementById("editIndex").value = index;
+      document.getElementById("id_payroll_process").value = item.id;
+      document.getElementById("id_master_period").value = item.masterPeriod;
+      document.getElementById("id_employee_type").value = item.employeeType;
+      document.getElementById("description").value = item.description;
+      document.getElementById("date").value = item.date;
+      document.getElementById("annualize").value = item.annualize;
+      formModal.show();
+    }
+
+    function deleteData(index) {
+      if (confirm("Are you sure you want to delete this data?")) {
+        payrollData.splice(index, 1);
+        renderTable();
+      }
+    }
+
+    payrollForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const id = document.getElementById("id_payroll_process").value;
+      const masterPeriod = document.getElementById("id_master_period").value;
+      const employeeType = document.getElementById("id_employee_type").value;
+      const description = document.getElementById("description").value;
+      const date = document.getElementById("date").value;
+      const annualize = document.getElementById("annualize").value === "true";
+
+      const editIndex = document.getElementById("editIndex").value;
+
+      if (editIndex === "") {
+        payrollData.push({ id, masterPeriod, employeeType, description, date, annualize });
+      } else {
+        payrollData[editIndex] = { id, masterPeriod, employeeType, description, date, annualize };
+      }
+
+      formModal.hide();
+      renderTable();
+    });
+
+    renderTable();
+  </script>
 </body>
 </html>
