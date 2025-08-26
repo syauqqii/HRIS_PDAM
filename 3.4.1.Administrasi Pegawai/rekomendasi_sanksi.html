@@ -29,6 +29,7 @@
                 <th>Employee</th>
                 <th>Start Date</th>
                 <th>End Date</th>
+                <th>Note</th>
                 <th class="text-center">Actions</th>
               </tr>
             </thead>
@@ -39,6 +40,7 @@
                 <td>John Doe</td>
                 <td>2025-08-01</td>
                 <td>2025-08-31</td>
+                <td>Waiting Approval</td>
                 <td class="text-center">
                   <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#formModal">Edit</button>
                   <button class="btn btn-sm btn-outline-secondary">Delete</button>
@@ -88,6 +90,11 @@
                 <div class="col-md-6">
                   <label class="form-label">End Date</label>
                   <input type="date" class="form-control" name="end_date" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Note</label>
+                  <input type="text" class="form-control" name="end_date" required>
                 </div>
 
               </div>
